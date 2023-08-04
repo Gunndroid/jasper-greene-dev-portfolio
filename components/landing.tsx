@@ -23,7 +23,10 @@ const Landing: React.FC = () => {
   };
 
   return (
-    <div className="bg-c-green-dark h-screen w-full flex items-center">
+    <div
+      id="home-section"
+      className="bg-c-green-dark h-screen w-full flex items-center"
+    >
       <div className="text-c-gray w-1/3 ml-28">
         <p>Hello, my name is</p>
         <h2 className="text-5xl font-bold mb-2">Gunnar Curry</h2>
@@ -32,7 +35,7 @@ const Landing: React.FC = () => {
         </h1>
         <button
           onClick={handleContactClick}
-          className="bg-white text-c-green-dark px-4 py-2 rounded mt-4"
+          className="bg-c-gray text-c-green-dark px-4 py-2 rounded mt-4"
         >
           Let&apos;s Talk
         </button>
@@ -42,63 +45,63 @@ const Landing: React.FC = () => {
           <div className="bg-white p-8 rounded w-1/3">
             <form>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2">
+                <label className="block text-c-green-dark text-sm font-bold mb-2">
                   First Name
                 </label>
                 <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-c-green-dark"
                   type="text"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2">
+                <label className="block text-c-green-dark text-sm font-bold mb-2">
                   Last Name
                 </label>
                 <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-c-green-dark"
                   type="text"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2">
+                <label className="block text-c-green-dark text-sm font-bold mb-2">
                   Email
                 </label>
                 <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-c-green-dark"
                   type="email"
                   required
                 />
               </div>
               {/* <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2">
+                <label className="block text-c-green-dark text-sm font-bold mb-2">
                   Phone
                 </label>
                 <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-c-green-dark"
                   type="tel"
                 />
               </div> */}
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2">
+                <label className="block text-c-green-dark text-sm font-bold mb-2">
                   Subject
                 </label>
                 <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-c-green-dark"
                   type="text"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2">
+                <label className="block text-c-green-dark text-sm font-bold mb-2">
                   Message
                 </label>
-                <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"></textarea>
+                <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-c-green-dark"></textarea>
               </div>
               <button
                 type="submit"
-                className="bg-c-green-medium text-white px-4 py-2 rounded"
+                className="bg-c-green-medium text-c-gray px-4 py-2 rounded"
               >
                 Submit
               </button>

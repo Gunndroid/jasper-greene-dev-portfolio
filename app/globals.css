@@ -41,26 +41,24 @@ code {
     monospace;
 }
 
-nav {
-  /* background-color: black; */
-  /* border-bottom-width: 1.5px; */
-  /* border-color: white; */
-}
-
-footer {
+/* footer {
   background-color: black;
   border-top-width: 1.5px;
   border-color: white;
-}
+} */
 
-#footer {
+/* #footer {
   position: absolute;
   left: 0;
   bottom: 0;
   right: 0;
-}
+} */
 
 /* ::selection {
   color: rgb(0, 0, 0);
   background: rgb(7, 173, 218);
 } */
+
+html {
+  scroll-behavior: smooth;
+}

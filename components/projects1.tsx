@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 import commandcenter from "../public/img/commandcenter.png";
@@ -8,7 +8,7 @@ import whale from "../public/img/whale.png";
 import random_color from "../public/img/random_color.png";
 import f1 from "../public/img/f1cuts.png";
 import brwr from "../public/img/brwr.png";
-// import lbk from "../public/media/img/lbk.png";
+import lbk from "../public/img/lbk2.png";
 // import ars from "../public/media/img/ARS.png";
 import swm from "../public/img/sport.png";
 
@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
       href: "https://lilbirdkitchens.com/",
       description: "Vegetable Mixes Ecommerce Site",
       technologies: "(WordPress, Elementor)",
-      image: swm,
+      image: lbk,
       color: "bg-red-900",
     },
     {
@@ -87,16 +87,19 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects-box" className="flex flex-col h-screen ">
-      <h3 className="text-white text-2xl text-center font-bold m-5 ">
-        <span className="px-10 py-2 text-c-green-medium text-4xl ">
-          Recent Works
+    <section
+      id="projects-section"
+      className="flex flex-col h-screen overflow-y-scroll  bg-c-gray"
+    >
+      <h3 className="text-white text-2xl text-right font-bold m-5 ">
+        <span className="px-10 py-2 text-c-green-medium text-4xl mr-44">
+          Projects
         </span>
       </h3>
 
       {projects.map((project) => (
         <div
-          className={`flex flex-col items-center justify-center h-screen ${project.color} `} // Added top and bottom margin
+          className={`flex flex-col items-center justify-center ${project.color}`}
           key={project.title}
         >
           <div className="flex items-center w-5/6 mx-auto">
@@ -114,11 +117,11 @@ const Projects: React.FC = () => {
               href={project.href}
               target="_blank"
               rel="noreferrer"
-              className="h-screen"
+              className="h-5/6"
             >
               {project.image && (
                 <Image
-                  className="rounded-md shadow-black shadow-md w-5/6"
+                  className="rounded-md shadow-black shadow-md w-1/2"
                   src={project.image}
                   alt={project.title}
                 />
