@@ -48,6 +48,7 @@ const Landing: React.FC = () => {
                 <input
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
                   type="text"
+                  required
                 />
               </div>
               <div className="mb-4">
@@ -57,6 +58,7 @@ const Landing: React.FC = () => {
                 <input
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
                   type="text"
+                  required
                 />
               </div>
               <div className="mb-4">
@@ -66,9 +68,10 @@ const Landing: React.FC = () => {
                 <input
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
                   type="email"
+                  required
                 />
               </div>
-              <div className="mb-4">
+              {/* <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2">
                   Phone
                 </label>
@@ -76,7 +79,7 @@ const Landing: React.FC = () => {
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
                   type="tel"
                 />
-              </div>
+              </div> */}
               <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2">
                   Subject
@@ -84,6 +87,7 @@ const Landing: React.FC = () => {
                 <input
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
                   type="text"
+                  required
                 />
               </div>
               <div className="mb-4">

@@ -18,9 +18,7 @@ const Header: React.FC = () => (
         <Link legacyBehavior href="/services">
           <a className="w-fit mx-auto">Services</a>
         </Link>
-        <Link legacyBehavior href="/resume">
-          <a className="w-fit mx-auto">Resume</a>
-        </Link>
+
         <a
           href="https://github.com/Gunndroid"
           target="_blank"
@@ -29,7 +27,10 @@ const Header: React.FC = () => (
         >
           GitHub
         </a>
-        <div>
+        <a href="/GunnarCurryResume3.pdf" download className="w-fit mx-auto">
+          Resume
+        </a>
+        {/* <div>
           <a
             id="contact"
             className="w-fit"
@@ -37,7 +38,7 @@ const Header: React.FC = () => (
           >
             Contact
           </a>
-        </div>
+        </div> */}
       </div>
     </nav>
   </>

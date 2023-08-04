@@ -1,6 +1,5 @@
-// import { Link, Route, Routes } from "react-router-dom";
 
-const Footer = () => (
+const Footer: React.FC = () => (
   <>
     <footer className="text-center h-fit grid items-center bg-stone-700">
       {/* <Link to="/contact">Contact</Link> */}
