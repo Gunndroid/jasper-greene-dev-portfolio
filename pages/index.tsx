@@ -6,7 +6,6 @@ import About from "@/components/about";
 import Skills from "@/components/skills";
 import Projects from "@/components/projects1";
 import Footer from "@/components/footer";
-import Contact from "@/components/contact";
 
 const Home: React.FC = () => {
   const scrollToTop = () => {
@@ -20,7 +19,6 @@ const Home: React.FC = () => {
       <About />
       <Skills />
       <Projects />
-      {/* <Contact /> */}
       <Footer />
       <button
         onClick={scrollToTop}
