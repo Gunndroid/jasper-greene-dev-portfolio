@@ -34,36 +34,39 @@ const About: React.FC = () => {
           of visiting more than 25 countries including; Ukraine, Brazil, and
           Japan. I&apos;m very fond of learning and experiencing other cultures.
         </p> */}
-        <p className="mb-4">
-          With a history in creativity, I&apos;ve dedicated several years of my
-          life to filmmaking and photography. Over time, I&apos;ve crafted
-          hundreds of illustrations and paintings, each reflecting my artistic
-          vision.
-        </p>
-        <p className="mb-4">
-          My journey into programming began with a curiosity to understand
-          Solidity Smart Contracts. Upon attempting to decipher them, I quickly
-          realized the necessity to learn Javascript first.
-        </p>
-        <p className="mb-4">That&apos;s how this all began.</p>
-        <br />
-        <p className="mb-4">
-          At present, I find myself working with React and Next.js, complemented
-          by Tailwind CSS. These tools enable me to craft visually stunning and
-          responsive user interfaces that not only please the eye but also
-          provide functionality.
-        </p>
-        <p className="mb-4">
-          My code is more than lines and syntax; it represents my endeavor to
-          create impactful projects that make a difference.
-        </p>
-        <br />
-        <p className="mb-4">
-          Beyond the digital realm, I am an devoted traveler. I&apos;ve had the
-          pleasure of exploring more than 25 countries, including diverse
-          destinations such as Ukraine, Brazil, and Japan. Each journey extends
-          my appreciation for learning and immersing myself in various cultures.
-        </p>
+        <div className="text-stone-800">
+          <p className="mb-4">
+            With a history in creativity, I&apos;ve dedicated several years of
+            my life to filmmaking and photography. Over time, I&apos;ve crafted
+            hundreds of illustrations and paintings, each reflecting my artistic
+            vision.
+          </p>
+          <p className="mb-4">
+            My journey into programming began with a curiosity to understand
+            Solidity Smart Contracts. Upon attempting to decipher them, I
+            quickly realized the necessity to learn Javascript first.
+          </p>
+          <p className="mb-4">That&apos;s how this all began.</p>
+          <br />
+          <p className="mb-4">
+            At present, I find myself working with React and Next.js,
+            complemented by Tailwind CSS. These tools enable me to craft
+            visually stunning and responsive user interfaces that not only
+            please the eye but also provide functionality.
+          </p>
+          <p className="mb-4">
+            My code is more than lines and syntax; it represents my endeavor to
+            create impactful projects that make a difference.
+          </p>
+          <br />
+          <p className="mb-4">
+            Beyond the digital realm, I am an devoted traveler. I&apos;ve had
+            the pleasure of exploring more than 25 countries, including diverse
+            destinations such as Ukraine, Brazil, and Japan. Each journey
+            extends my appreciation for learning and immersing myself in various
+            cultures.
+          </p>
+        </div>
       </div>
     </main>
   );

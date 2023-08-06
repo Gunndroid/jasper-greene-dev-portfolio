@@ -1,6 +1,7 @@
 // pages/_error.tsx
 import React from "react";
 import Link from "next/link";
+import "../app/globals.css";
 
 const NotFoundPage: React.FC = () => (
   <div className="bg-c-green-dark h-screen flex flex-col justify-center items-center text-c-gray">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import "../app/globals.css";
 
 import commandcenter from "../public/img/commandcenter.png";
 import puffwizz from "../public/img/puffwizz.png";
@@ -22,7 +23,7 @@ const Projects: React.FC = () => {
       description: "Vegetable Mixes Ecommerce Site",
       technologies: "WordPress, Elementor",
       image: lbk,
-      color: "bg-c-green-light",
+      color: "bg-c-gray",
     },
     // {
     //   title: "Sport With Me",
@@ -38,7 +39,7 @@ const Projects: React.FC = () => {
       description: "This App is a Video Marketing Agency.",
       technologies: "(React, Tailwind CSS)",
       image: f1,
-      color: "bg-c-green-medium",
+      color: "bg-c-green-light",
     },
     // {
     //   title: "American RFID Solutions",
@@ -54,7 +55,7 @@ const Projects: React.FC = () => {
       description: "My Puffwizz NFT project.",
       technologies: "React, Solidity",
       image: puffwizz,
-      color: "bg-c-green-dark",
+      color: "bg-c-green-medium",
     },
     {
       title: "Command Center",
@@ -93,14 +94,14 @@ const Projects: React.FC = () => {
   const [activeProject, setActiveProject] = useState(0); // Initialize activeProject to 0
 
   return (
-    <div id="projects-section" className="bg-c-gray h-screen min-w-full">
-      <h3 className="text-left ml-20 font-bold p-10 text-c-green-medium text-4xl h-fit">
-        Projects
-      </h3>
+    <div id="projects-section" className="bg-c-gray h-screen min-w-full ">
       <section
-        className="flex flex-row h-2/3  overflow-x-auto overflow-y-hidden bg-stone-800"
+        className="flex flex-row h-screen overflow-x-auto overflow-y-hidden bg-stone-800"
         onMouseLeave={() => setActiveProject(0)} // Set activeProject to 0 when mouse leaves the section
       >
+        <h3 className="right-12 font-bold pt-12 text-c-gray text-4xl absolute ">
+          Projects
+        </h3>
         {projects.map((project, index) => (
           <div
             onMouseEnter={() => setActiveProject(index)}
@@ -111,7 +112,7 @@ const Projects: React.FC = () => {
           >
             <div className="flex flex-row items-center justify-center w-full space-x-10">
               {" "}
-              <div className="flex flex-col text-white text-center ml-16">
+              <div className="flex flex-col text-stone-700 text-center ml-16">
                 {activeProject === index && (
                   <>
                     <p className="font-bold text-3xl mb-6">{project.title}</p>
@@ -130,7 +131,11 @@ const Projects: React.FC = () => {
               >
                 {project.image && (
                   <Image
-                    className="rounded-md shadow-black shadow-md w-5/6"
+                    className={`project-image rounded-md shadow-black shadow-md w-5/6 ${
+                      index === 0
+                        ? "filter grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
+                        : ""
+                    }`}
                     src={project.image}
                     alt={project.title}
                   />

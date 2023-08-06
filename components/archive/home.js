@@ -2,7 +2,7 @@
 import "../app/globals.css";
 import ContactBox from "./contactBox";
 import Projects from "./projects";
-import Skills from "./skills";
+import Skills from "../skills";
 
 const Home = () => (
   <main>
