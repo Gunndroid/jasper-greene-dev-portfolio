@@ -31,7 +31,7 @@ const Header: React.FC = () => {
             <a className="w-fit mx-auto">Projects</a>
           </Link>
 
-          <a onClick={openModal} className="w-fit mx-auto">
+          <a onClick={openModal} className="w-fit mx-auto cursor-pointer">
             Resume
           </a>
           {/* <a
@@ -56,8 +56,8 @@ const Header: React.FC = () => {
       </nav>
 
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center ">
-          <div className="bg-c-gray py-10 px-4 rounded-lg relative h-[95%] w-1/2">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 ">
+          <div className="bg-c-gray pt-10 pb-4 px-4 rounded-lg relative h-[95%] w-1/2">
             <embed
               src="/GunnarCurryResume_GameGrid.pdf"
               type="application/pdf"
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
             <a
               href="/GunnarCurryResume_GameGrid.pdf"
               download
-              className="absolute bottom-0 right-0 m-2 mr-4 text-c-green-dark"
+              className="absolute top-0 right-14 m-2 mr-4 text-c-green-dark"
             >
               Download
             </a>

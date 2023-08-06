@@ -24,7 +24,7 @@ const Footer: React.FC = () => (
             <img src="/icons/github.png" alt="GitHub" className="w-6 h-6" />
           </a>
           <a
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/gunnarlukari/"
             target="_blank"
             rel="noreferrer"
           >
@@ -33,13 +33,13 @@ const Footer: React.FC = () => (
           <a href="mailto:glukari@protonmail.com">
             <img src="/icons/email.png" alt="Email" className="w-6 h-6" />
           </a>
-          <a
+          {/* <a
             href="https://twitter.com/your-username"
             target="_blank"
             rel="noreferrer"
           >
             <img src="/icons/twitter.png" alt="Twitter" className="w-6 h-6" />
-          </a>
+          </a> */}
         </div>
       </div>
       <div>

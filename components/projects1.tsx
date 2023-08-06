@@ -20,53 +20,55 @@ const Projects: React.FC = () => {
       title: "Lil Bird Kitchens",
       href: "https://lilbirdkitchens.com/",
       description: "Vegetable Mixes Ecommerce Site",
-      technologies: "(WordPress, Elementor)",
+      technologies: "WordPress, Elementor",
       image: lbk,
-      color: "bg-red-900",
+      color: "bg-c-green-light",
     },
-    {
-      title: "Sport With Me",
-      href: "https://sportwithme.vercel.app/",
-      description: "A Sports App Connecting Pupils and Coaches",
-      technologies: "(Next.js, Express.js)",
-      image: swm,
-      color: "bg-lime-900",
-    },
+    // {
+    //   title: "Sport With Me",
+    //   href: "https://sportwithme.vercel.app/",
+    //   description: "A Sports App Connecting Pupils and Coaches",
+    //   technologies: "(Next.js, Express.js)",
+    //   image: swm,
+    //   color: "bg-lime-900",
+    // },
     {
       title: "F1 Cuts",
       href: "https://f1-cuts.vercel.app/",
       description: "This App is a Video Marketing Agency.",
       technologies: "(React, Tailwind CSS)",
       image: f1,
-      color: "bg-red-800",
+      color: "bg-c-green-medium",
     },
     // {
     //   title: "American RFID Solutions",
     //   href: "https://stg-americanrfidsolutionscom-staging.kinsta.cloud/",
     //   description: "RFID Ecommerce Site",
-    //   technologies: "(Wordpress and Elementor)",
+    //   technologies: "Wordpress and Elementor",
     //   image: null, // Replace with the appropriate image
+    //   color: "bg-c-green-medium",
     // },
     {
       title: "PuffWizz NFT",
       href: "https://puffwizz-nft.vercel.app/",
       description: "My Puffwizz NFT project.",
-      technologies: "(React, Solidity)",
+      technologies: "React, Solidity",
       image: puffwizz,
-      color: "bg-pink-800",
+      color: "bg-c-green-dark",
     },
-    // {
-    //   title: "Command Center",
-    //   href: "https://cmdcntr.io/",
-    //   description: "This App Manages Tickets for Web Development.",
-    //   technologies: "(React, Tailwind CSS)",
-    //   image: commandcenter,
-    // },
+    {
+      title: "Command Center",
+      href: "https://cmdcntr.io/",
+      description: "This App Manages Tickets for Web Development.",
+      technologies: "React, Tailwind CSS",
+      image: commandcenter,
+      color: "bg-c-green-darker",
+    },
     {
       title: "Big Run Wolf Ranch",
       href: "https://bigrunwolfranch.org/",
       description: "Wildlife Ranch with Events and Animal Education",
-      technologies: "(WordPress, Elementor)",
+      technologies: "WordPress, Elementor",
       image: brwr,
       color: "bg-stone-800",
     },
@@ -76,6 +78,7 @@ const Projects: React.FC = () => {
     //   description: "This App Will Translate English into Whale Speech.",
     //   technologies: "(Javascript)",
     //   image: whale,
+    //   color: "bg-green-800",
     // },
     // {
     //   title: "Color Randomizer",
@@ -83,54 +86,61 @@ const Projects: React.FC = () => {
     //   description: "This App Generates a Random RGB Color.",
     //   technologies: "(React)",
     //   image: random_color,
+    //   color: "bg-orange-800",
     // },
   ];
 
-  return (
-    <section
-      id="projects-section"
-      className="flex flex-col h-screen overflow-y-scroll  bg-c-gray"
-    >
-      <h3 className="text-white text-2xl text-right font-bold m-5 ">
-        <span className="px-10 py-2 text-c-green-medium text-4xl mr-44">
-          Projects
-        </span>
-      </h3>
+  const [activeProject, setActiveProject] = useState(0); // Initialize activeProject to 0
 
-      {projects.map((project) => (
-        <div
-          className={`flex flex-col items-center justify-center ${project.color}`}
-          key={project.title}
-        >
-          <div className="flex items-center w-5/6 mx-auto">
-            {" "}
-            <div className="flex flex-col mr-14 text-white">
+  return (
+    <div id="projects-section" className="bg-c-gray h-screen min-w-full">
+      <h3 className="text-left ml-20 font-bold p-10 text-c-green-medium text-4xl h-fit">
+        Projects
+      </h3>
+      <section
+        className="flex flex-row h-2/3  overflow-x-auto overflow-y-hidden bg-stone-800"
+        onMouseLeave={() => setActiveProject(0)} // Set activeProject to 0 when mouse leaves the section
+      >
+        {projects.map((project, index) => (
+          <div
+            onMouseEnter={() => setActiveProject(index)}
+            className={`flex flex-col items-center justify-center transition-all duration-500 ease-in-out ${
+              project.color
+            } ${activeProject === index ? "w-full" : "w-14"}`}
+            key={project.title}
+          >
+            <div className="flex flex-row items-center justify-center w-full space-x-10">
               {" "}
-              <p className="font-bold text-3xl">{project.title}</p>
-              <p className="text-md">
-                {project.description}
-                <br />
-                <i>{project.technologies}</i>
-              </p>
+              <div className="flex flex-col text-white text-center ml-16">
+                {activeProject === index && (
+                  <>
+                    <p className="font-bold text-3xl mb-6">{project.title}</p>
+                    <div className="text-md">
+                      <div className="mb-4">{project.description}</div>
+                      <i>{project.technologies}</i>
+                    </div>
+                  </>
+                )}
+              </div>
+              <a
+                href={project.href}
+                target="_blank"
+                rel="noreferrer"
+                className="h-5/6 flex items-center justify-center" // Add these classes
+              >
+                {project.image && (
+                  <Image
+                    className="rounded-md shadow-black shadow-md w-5/6"
+                    src={project.image}
+                    alt={project.title}
+                  />
+                )}
+              </a>
             </div>
-            <a
-              href={project.href}
-              target="_blank"
-              rel="noreferrer"
-              className="h-5/6"
-            >
-              {project.image && (
-                <Image
-                  className="rounded-md shadow-black shadow-md w-1/2"
-                  src={project.image}
-                  alt={project.title}
-                />
-              )}
-            </a>
           </div>
-        </div>
-      ))}
-    </section>
+        ))}
+      </section>
+    </div>
   );
 };
 

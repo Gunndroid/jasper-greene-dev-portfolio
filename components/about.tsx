@@ -35,7 +35,7 @@ const About: React.FC = () => {
           Japan. I&apos;m very fond of learning and experiencing other cultures.
         </p> */}
         <p className="mb-4">
-          With a rich background in creativity, I dedicated several years of my
+          With a history in creativity, I&apos;ve dedicated several years of my
           life to filmmaking and photography. Over time, I&apos;ve crafted
           hundreds of illustrations and paintings, each reflecting my artistic
           vision.
@@ -45,7 +45,7 @@ const About: React.FC = () => {
           Solidity Smart Contracts. Upon attempting to decipher them, I quickly
           realized the necessity to learn Javascript first.
         </p>
-        <p className="mb-4">That&apos;s how this journey began.</p>
+        <p className="mb-4">That&apos;s how this all began.</p>
         <br />
         <p className="mb-4">
           At present, I find myself working with React and Next.js, complemented
