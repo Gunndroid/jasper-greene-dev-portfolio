@@ -6,7 +6,7 @@ const Footer: React.FC = () => (
       <div className="flex flex-row justify-between w-10/12 pt-16">
         {/* Column 1 */}
         <div className="ml-10">
-          <h2 className="text-4xl font-bold mb-2">Need a Developer?</h2>
+          <h2 className="text-3xl font-bold mb-2">Need a Developer?</h2>
           <p className="mb-4">Let&apos;s build something awesome together.</p>
           {/* <h3 className="text-xl font-bold mb-2">Get in Touch</h3> */}
           <a href="mailto:gunnarcurry@icloud.com" className="underline">
@@ -16,7 +16,7 @@ const Footer: React.FC = () => (
         {/* Column 2 */}
         <div className="mr-10">
           <div className="">
-            <h3 className="text-4xl font-bold mb-2">Socialize With Me</h3>
+            <h3 className="text-3xl font-bold mb-2">Socialize With Me</h3>
             <div className="flex justify-center space-x-10 mt-4">
               {/* GitHub */}
               <a
@@ -116,7 +116,7 @@ const Footer: React.FC = () => (
                 </div>
               </a>
               {/* Email */}
-              <a href="mailto:glukari@protonmail.com">
+              <a href="mailto:gunnarcurry@icloud.com">
                 <div className="w-10">
                   <svg
                     viewBox="0 0 24 24"
@@ -165,7 +165,9 @@ const Footer: React.FC = () => (
     </section>
     <footer className="p-6 pt-10">
       <div className="text-center border-c-gray pt-6 border-t-[1px]">
-        <p className="cursor-default text-md">©GunnarCurry2023</p>
+        <p className="cursor-default text-md">
+          ©GunnarCurry{new Date().getFullYear()}
+        </p>
       </div>
     </footer>
   </div>

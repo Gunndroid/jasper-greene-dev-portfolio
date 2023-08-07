@@ -14,7 +14,7 @@ const Header: React.FC = () => {
   };
   return (
     <>
-      <nav className="bg-transparent fixed top-0 w-full flex justify-between h-10 text-c-gray items-center">
+      <nav className="bg-transparent fixed top-0 w-full flex justify-between h-10 text-c-gray items-center z-50">
         <img src="/path/to/your/logo.png" alt="Logo" className="h-8 ml-4" />
 
         <div className="flex space-x-10 mr-8 mt-5">
