@@ -11,7 +11,7 @@ import f1 from "../public/img/f1cuts.png";
 import brwr from "../public/img/brwr.png";
 import lbk from "../public/img/lbk2.png";
 // import ars from "../public/media/img/ARS.png";
-import swm from "../public/img/sport.png";
+// import swm from "../public/img/sport.png";
 
 // Images imported here
 
@@ -26,14 +26,7 @@ const Projects: React.FC = () => {
       image: lbk,
       color: "bg-c-gray",
     },
-    // {
-    //   title: "Sport With Me",
-    //   href: "https://sportwithme.vercel.app/",
-    //   description: "A Sports App Connecting Pupils and Coaches",
-    //   technologies: "(Next.js, Express.js)",
-    //   image: swm,
-    //   color: "bg-lime-900",
-    // },
+
     // {
     //   title: "F1 Cuts",
     //   href: "https://f1-cuts.vercel.app/",
