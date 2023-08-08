@@ -14,7 +14,7 @@ const Home: React.FC = () => {
 
   return (
     <main>
-      <Header />
+      {/* <Header /> */}
       <Landing />
       <About />
       <Skills />

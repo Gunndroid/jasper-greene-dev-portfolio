@@ -1,9 +1,48 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 const Header: React.FC = () => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    let lastY = 0;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const currentY = window.scrollY;
+          if (currentY < lastY) {
+            // scrolling up
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.05) {
+              setActiveSection(entry.target.id);
+            }
+          } else {
+            // scrolling down
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.95) {
+              setActiveSection(entry.target.id);
+            }
+          }
+          lastY = currentY;
+        });
+      },
+      { threshold: [0.05, 0.95] }
+    );
+
+    const sections = document.querySelectorAll(
+      "#home-section, #about-section, #projects-section, #skills-section"
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
 
   const openModal = () => {
     setModalOpen(true);
@@ -14,8 +53,16 @@ const Header: React.FC = () => {
   };
   return (
     <>
-      <nav className="bg-transparent fixed top-0 w-full flex justify-between h-10 text-c-gray items-center z-50">
-        <img src="/path/to/your/logo.png" alt="Logo" className="h-8 ml-4" />
+      {/* <nav className="bg-transparent fixed top-0 w-full ml-10 flex justify-start h-10 text-c-gray items-center z-50"> */}
+      <nav
+        className={`bg-transparent fixed top-0 w-full ml-10 flex justify-start h-10 text-${
+          activeSection === "about-section" ||
+          activeSection === "projects-section"
+            ? "c-green-darker"
+            : "c-gray"
+        } items-center z-50`}
+      >
+        {/* <img src="/path/to/your/logo.png" alt="Logo" className="h-8 ml-4" /> */}
 
         <div className="flex space-x-10 mr-8 mt-5">
           <Link legacyBehavior href="#home-section">

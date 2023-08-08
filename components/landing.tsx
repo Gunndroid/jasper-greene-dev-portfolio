@@ -46,15 +46,6 @@ const Landing: React.FC = () => {
       });
   };
 
-  // const onSubmit = (data: any) => {
-  //   // You can use data to send an email
-  //   // Usually, you would call a server function here to send the email.
-  //   console.log(data);
-
-  //   // Close the modal
-  //   setShowModal(false);
-  // };
-
   return (
     <div
       id="home-section"
@@ -69,7 +60,7 @@ const Landing: React.FC = () => {
           </div>
         </div>
       )}
-      <div className="text-c-gray w-1/3 ml-28">
+      <div className="text-c-gray w-1/3 ml-32">
         <p>Hello, my name is</p>
         <h2 className="text-5xl font-bold mb-2">Gunnar Curry</h2>
         <h1>
@@ -83,7 +74,7 @@ const Landing: React.FC = () => {
         </button>
       </div>
       <div className="absolute bottom-0 right-0 ">
-        <img src="../img/gunnarEdit.png" className="w-[95vh] opacity-90" />
+        <img src="../img/gunnarEdit.png" className="w-[100vh] opacity-90" />
       </div>
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
