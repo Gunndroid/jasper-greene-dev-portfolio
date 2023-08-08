@@ -43,7 +43,6 @@ const Header: React.FC = () => {
       });
     };
   }, []);
-
   const openModal = () => {
     setModalOpen(true);
   };
@@ -53,7 +52,6 @@ const Header: React.FC = () => {
   };
   return (
     <>
-      {/* <nav className="bg-transparent fixed top-0 w-full ml-10 flex justify-start h-10 text-c-gray items-center z-50"> */}
       <nav
         className={`bg-transparent fixed top-0 w-full ml-10 flex justify-start h-10 text-${
           activeSection === "about-section" ||
@@ -62,8 +60,6 @@ const Header: React.FC = () => {
             : "c-gray"
         } items-center z-50`}
       >
-        {/* <img src="/path/to/your/logo.png" alt="Logo" className="h-8 ml-4" /> */}
-
         <div className="flex space-x-10 mr-8 mt-5">
           <Link legacyBehavior href="#home-section">
             <a className="w-fit text-center mx-auto">Home</a>
@@ -82,24 +78,6 @@ const Header: React.FC = () => {
           <a onClick={openModal} className="w-fit mx-auto cursor-pointer">
             Resume
           </a>
-          {/* <a
-          href="https://github.com/Gunndroid"
-          target="_blank"
-          rel="noreferrer"
-          className="w-fit mx-auto"
-        >
-          GitHub
-        </a> */}
-
-          {/* <div>
-          <a
-            id="contact"
-            className="w-fit"
-            href="mailto:glukari@protonmail.com"
-          >
-            Contact
-          </a>
-        </div> */}
         </div>
       </nav>
 
