@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import "./../app/globals.css";
 
-type Color = "green" | "purple" | "blue";
-
 interface ColorOption {
-  color: Color;
+  color: string;
   onClick: () => void;
 }
 
 interface ColorToggleBtnProps {
   options: ColorOption[];
-  activeColor: Color;
+  activeColor: string;
 }
 
 const ColorToggleBtn: React.FC<ColorToggleBtnProps> = ({
