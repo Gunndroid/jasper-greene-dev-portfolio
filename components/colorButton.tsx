@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./../app/globals.css";
 
+type Color = "green" | "purple" | "blue";
+
 interface ColorOption {
-  color: string;
+  color: Color;
   onClick: () => void;
 }
 
