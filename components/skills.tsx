@@ -38,14 +38,14 @@ const SkillsAndServices: React.FC<SkillsAndServicesProps> = ({
   return (
     <main
       id="skills-section"
-      className={`bg-c-${colorScheme}-dark text-c-green-gray h-screen flex items-center justify-center`}
+      className={`bg-c-${colorScheme}-dark text-c-green-gray h-screen flex items-center justify-center transition-all duration-700 ease-in-out`}
     >
       <section
-        className={`w-1/2 flex flex-col items-center py-10 border-r border-c-${colorScheme}-gray`}
+        className={`w-1/2 flex flex-col items-center py-10 border-r border-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
       >
         <div className="skills-container">
           <h1
-            className={`skills-text text-c-${colorScheme}-gray text-4xl font-bold text-center mb-10`}
+            className={`skills-text text-c-${colorScheme}-gray text-4xl font-bold text-center mb-10 transition-all duration-700 ease-in-out`}
           >
             Skills
           </h1>
@@ -121,11 +121,14 @@ ${icons
 `
   )
   .join("\n")}
-      `}
+       transition-all duration-700 ease-in-out`}
           </style>
           <div className="circle-container">
             {icons.map((item, index) => (
-              <div key={index} className={`icon-container icon-${index}`}>
+              <div
+                key={index}
+                className={`icon-container icon-${index} transition-all duration-700 ease-in-out`}
+              >
                 <img className="icon" src={item.src} alt={item.alt} />
               </div>
             ))}
@@ -133,15 +136,15 @@ ${icons
         </div>
       </section>
       <section
-        className={`w-1/2 flex flex-col items-center py-10 text-c-${colorScheme}-gray`}
+        className={`w-1/2 flex flex-col items-center py-10 text-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
       >
         <h1
-          className={`text-4xl font-bold text-center mb-10 text-c-${colorScheme}-gray`}
+          className={`text-4xl font-bold text-center mb-10 text-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
         >
           Services
         </h1>
         <table
-          className={`border border-c-green-gray text-center text-xl mx-auto w-2/3 text-c-${colorScheme}-gray`}
+          className={`border border-c-green-gray text-center text-xl mx-auto w-2/3 text-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
         >
           <tbody>
             {services.map((service, index) => (
@@ -149,7 +152,7 @@ ${icons
                 <td
                   className={`px-10 py-2 border border-c-${colorScheme}-gray ${
                     index % 2 === 0 ? `bg-c-${colorScheme}-medium` : ""
-                  }`}
+                  } transition-all duration-700 ease-in-out`}
                 >
                   {service}
                 </td>

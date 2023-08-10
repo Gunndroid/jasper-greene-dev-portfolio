@@ -5,7 +5,9 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ colorScheme }) => (
-  <div className={`bg-c-${colorScheme}-dark text-c-${colorScheme}-gray`}>
+  <div
+    className={`bg-c-${colorScheme}-dark text-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
+  >
     <section className="p-7 flex flex-col items-center justify-center  w-full  ">
       <div className="flex flex-row justify-between w-10/12 pt-16">
         {/* Column 1 */}
@@ -168,7 +170,7 @@ const Footer: React.FC<FooterProps> = ({ colorScheme }) => (
     </section>
     <footer className="p-6 pt-10">
       <div
-        className={`text-center border-c-${colorScheme}-gray pt-6 border-t-[1px]`}
+        className={`text-center border-c-${colorScheme}-gray pt-6 border-t-[1px] transition-all duration-700 ease-in-out`}
       >
         <p className="cursor-default text-md">
           ©GunnarCurry{new Date().getFullYear()}

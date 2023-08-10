@@ -9,13 +9,17 @@ const About: React.FC<AboutProps> = ({ colorScheme }) => {
   return (
     <main
       id="about-section"
-      className={`flex flex-col items-center justify-center h-screen text-justify bg-c-${colorScheme}-gray`}
+      className={`flex flex-col items-center justify-center h-screen text-justify bg-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
     >
       <div className="text-lg w-2/3">
-        <h1 className={`text-4xl mb-8 text-c-${colorScheme}-medium font-bold`}>
+        <h1
+          className={`text-4xl mb-8 text-c-${colorScheme}-medium font-bold transition-all duration-700 ease-in-out`}
+        >
           About
         </h1>
-        <div className={`text-c-${colorScheme}-darker`}>
+        <div
+          className={`text-c-${colorScheme}-darker transition-all duration-700 ease-in-out`}
+        >
           <p className="mb-4">
             With a history in creativity, I&apos;ve dedicated several years of
             my life to filmmaking and photography. Over time, I&apos;ve crafted

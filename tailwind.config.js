@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: "jit",
+
   purge: {
     content: [
       "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -56,21 +58,21 @@ module.exports = {
         "text-c-pastel-darker",
         "border-c-pastel-darker",
 
-        "bg-c-berry-gray",
-        "text-c-berry-gray",
-        "border-c-berry-gray",
-        "bg-c-berry-light",
-        "text-c-berry-light",
-        "border-c-berry-light",
-        "bg-c-berry-medium",
-        "text-c-berry-medium",
-        "border-c-berry-medium",
-        "bg-c-berry-dark",
-        "text-c-berry-dark",
-        "border-c-berry-dark",
-        "bg-c-berry-darker",
-        "text-c-berry-darker",
-        "border-c-berry-darker",
+        "bg-c-purple-gray",
+        "text-c-purple-gray",
+        "border-c-purple-gray",
+        "bg-c-purple-light",
+        "text-c-purple-light",
+        "border-c-purple-light",
+        "bg-c-purple-medium",
+        "text-c-purple-medium",
+        "border-c-purple-medium",
+        "bg-c-purple-dark",
+        "text-c-purple-dark",
+        "border-c-purple-dark",
+        "bg-c-purple-darker",
+        "text-c-purple-darker",
+        "border-c-purple-darker",
 
         "bg-c-rose-gray",
         "bg-c-rose-light",
@@ -113,11 +115,11 @@ module.exports = {
         // "c-pastel-dark": "#ffd166",
         // "c-pastel-darker": "#ef476f",
 
-        "c-berry-gray": "#DAD7CD",
-        "c-berry-light": "#be95c4",
-        "c-berry-medium": "#9f86c0",
-        "c-berry-dark": "#5e548e",
-        "c-berry-darker": "#231942",
+        "c-purple-gray": "#DAD7CD",
+        "c-purple-light": "#be95c4",
+        "c-purple-medium": "#9f86c0",
+        "c-purple-dark": "#5e548e",
+        "c-purple-darker": "#231942",
 
         // "c-rose-gray": "#ffd9da",
         // "c-rose-light": "#ea638c",

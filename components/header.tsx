@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ colorScheme }) => {
   return (
     <>
       <nav
-        className={`bg-transparent fixed top-0 w-full ml-10 flex justify-center h-10 ${
+        className={`bg-transparent fixed top-0 w-full ml-10 flex justify-left h-10 ${
           activeSection === "about-section" ||
           activeSection === "projects-section"
             ? `text-c-${colorScheme}-darker`
