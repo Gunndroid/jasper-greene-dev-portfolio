@@ -2,7 +2,10 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  colorScheme: string;
+}
+const Header: React.FC<HeaderProps> = ({ colorScheme }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
@@ -53,11 +56,11 @@ const Header: React.FC = () => {
   return (
     <>
       <nav
-        className={`bg-transparent fixed top-0 w-full ml-10 flex justify-start h-10 text-${
+        className={`bg-transparent fixed top-0 w-full ml-10 flex justify-center h-10 ${
           activeSection === "about-section" ||
           activeSection === "projects-section"
-            ? "c-green-darker"
-            : "c-gray"
+            ? `text-c-${colorScheme}-darker`
+            : `text-c-${colorScheme}-gray`
         } items-center z-50`}
       >
         <div className="flex space-x-10 mr-8 mt-5">
@@ -83,7 +86,9 @@ const Header: React.FC = () => {
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 ">
-          <div className="bg-c-gray pt-10 pb-4 px-4 rounded-lg relative h-[95%] w-1/2">
+          <div
+            className={`bg-c-${colorScheme}-gray pt-10 pb-4 px-4 rounded-lg relative h-[95%] w-1/2`}
+          >
             <embed
               src="/GunnarCurryResume_GameGrid.pdf"
               type="application/pdf"
@@ -91,14 +96,14 @@ const Header: React.FC = () => {
             />
             <button
               onClick={closeModal}
-              className="absolute top-0 right-0 m-2 mr-4 text-c-green-dark"
+              className={`absolute top-0 right-0 m-2 mr-4 text-c-${colorScheme}-dark`}
             >
               Close
             </button>
             <a
               href="/GunnarCurryResume_GameGrid.pdf"
               download
-              className="absolute top-0 right-14 m-2 mr-4 text-c-green-dark"
+              className={`absolute top-0 right-14 m-2 mr-4 text-c-${colorScheme}-dark`}
             >
               Download
             </a>

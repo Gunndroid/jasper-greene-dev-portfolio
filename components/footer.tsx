@@ -1,14 +1,17 @@
 import React from "react";
 
-const Footer: React.FC = () => (
-  <div className="bg-c-green-dark text-c-gray ">
+interface FooterProps {
+  colorScheme: string; // add other color options as necessary
+}
+
+const Footer: React.FC<FooterProps> = ({ colorScheme }) => (
+  <div className={`bg-c-${colorScheme}-dark text-c-${colorScheme}-gray`}>
     <section className="p-7 flex flex-col items-center justify-center  w-full  ">
       <div className="flex flex-row justify-between w-10/12 pt-16">
         {/* Column 1 */}
         <div className="ml-10">
           <h2 className="text-3xl font-bold mb-2">Need a Developer?</h2>
           <p className="mb-4">Let&apos;s build something awesome together.</p>
-          {/* <h3 className="text-xl font-bold mb-2">Get in Touch</h3> */}
           <a href="mailto:gunnarcurry@icloud.com" className="underline">
             gunnarcurry@icloud.com
           </a>
@@ -164,7 +167,9 @@ const Footer: React.FC = () => (
       </div>
     </section>
     <footer className="p-6 pt-10">
-      <div className="text-center border-c-gray pt-6 border-t-[1px]">
+      <div
+        className={`text-center border-c-${colorScheme}-gray pt-6 border-t-[1px]`}
+      >
         <p className="cursor-default text-md">
           ©GunnarCurry{new Date().getFullYear()}
         </p>

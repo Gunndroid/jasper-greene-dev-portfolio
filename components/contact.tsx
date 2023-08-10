@@ -1,8 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-const Contact: React.FC = () => (
-  <section className="bg-c-gray text-c-green-dark p-7 flex flex-col items-center justify-center  w-full  mt-28">
+interface ContactProps {
+  colorScheme: string;
+}
+
+const Contact: React.FC<ContactProps> = ({ colorScheme }) => (
+  <section
+    className={`bg-c-${colorScheme}-gray text-c-green-dark p-7 flex flex-col items-center justify-center  w-full  mt-28`}
+  >
     <div className="flex flex-row justify-between w-10/12 pt-16">
       {/* Column 1 */}
       <div className="ml-10">

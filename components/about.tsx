@@ -1,40 +1,21 @@
 import React from "react";
 import "../app/globals.css";
 
-const About: React.FC = () => {
+interface AboutProps {
+  colorScheme: string;
+}
+
+const About: React.FC<AboutProps> = ({ colorScheme }) => {
   return (
     <main
       id="about-section"
-      className="flex flex-col items-center justify-center h-screen text-justify bg-c-gray"
+      className={`flex flex-col items-center justify-center h-screen text-justify bg-c-${colorScheme}-gray`}
     >
       <div className="text-lg w-2/3">
-        <h1 className="text-4xl mb-8 text-c-green-medium font-bold">About</h1>
-        {/* <p className="mb-4">
-          I have a history of creativity, I spent years of my life as a
-          filmmaker and photographer, I&apos;ve created hundreds of
-          illustrations and paintings.
-        </p>
-        <p className="mb-4">
-          I started my programming journey due to my interest in understanding
-          Solidity Smart Contracts, shortly after attempting to read them, I
-          realized I needed to learn Javascript first.
-        </p>
-        <p className="mb-4">Thats how this all began.</p>
-        <br />
-        <p className="mb-4">
-          Currently, I enjoy working with React and Next.js along with Tailwind
-          CSS to craft visually stunning and responsive user interfaces.
-        </p>
-        <p className="mb-4">
-          I write code to create useful projects that make a difference.
-        </p>
-        <br />
-        <p className="mb-4">
-          In addition to all that, I am a traveler. I&apos;ve had the pleasure
-          of visiting more than 25 countries including; Ukraine, Brazil, and
-          Japan. I&apos;m very fond of learning and experiencing other cultures.
-        </p> */}
-        <div className="text-stone-800">
+        <h1 className={`text-4xl mb-8 text-c-${colorScheme}-medium font-bold`}>
+          About
+        </h1>
+        <div className={`text-c-${colorScheme}-darker`}>
           <p className="mb-4">
             With a history in creativity, I&apos;ve dedicated several years of
             my life to filmmaking and photography. Over time, I&apos;ve crafted

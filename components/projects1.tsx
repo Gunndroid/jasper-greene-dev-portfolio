@@ -10,12 +10,16 @@ import random_color from "../public/img/random_color.png";
 import f1 from "../public/img/f1cuts.png";
 import brwr from "../public/img/brwr.png";
 import lbk from "../public/img/lbk2.png";
-// import ars from "../public/media/img/ARS.png";
+import ars from "../public/img/ARS.png";
 // import swm from "../public/img/sport.png";
 
 // Images imported here
 
-const Projects: React.FC = () => {
+interface ProjectProps {
+  colorScheme: string;
+}
+
+const Projects: React.FC<ProjectProps> = ({ colorScheme }) => {
   const projects = [
     {
       title: "Lil Bird Kitchens",
@@ -24,7 +28,7 @@ const Projects: React.FC = () => {
         "Vegetable Mixes Ecommerce Site. This project consisted of building a food-based ecommerce store from the ground up. I was tasked with improving the branding image and message, creating the products, and giving the business an online voice. Everything from adding to cart to submitting the checkout, I made successfully functional.",
       technologies: "WordPress, Elementor",
       image: lbk,
-      color: "bg-c-gray",
+      color: `bg-c-${colorScheme}-gray`,
     },
 
     // {
@@ -39,10 +43,11 @@ const Projects: React.FC = () => {
     {
       title: "American RFID Solutions",
       href: "https://stg-americanrfidsolutionscom-staging.kinsta.cloud/",
-      description: "RFID Ecommerce Site",
+      description:
+        "RFID Ecommerce Site Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Donec in efficitur ipsum. Proin a diam et dui fermentum molestie non id neque. Duis at venenatis eros, eget lacinia elit.",
       technologies: "Wordpress and Elementor",
-      image: null, // Replace with the appropriate image
-      color: "bg-c-green-light",
+      image: ars, // Replace with the appropriate image
+      color: `bg-c-${colorScheme}-light`,
     },
     {
       title: "PuffWizz NFT",
@@ -51,7 +56,7 @@ const Projects: React.FC = () => {
         "This was an origin project for me, the Puffwizz NFT project. It was this concept that sparked my interest in coding. I was very curious to build an NFT project and write my own Solidity Smart Contract. I wanted to understand how to read and write such contracts and thus this project was born.",
       technologies: "React, Solidity",
       image: puffwizz,
-      color: "bg-c-green-medium",
+      color: `bg-c-${colorScheme}-medium`,
     },
     {
       title: "Command Center",
@@ -60,7 +65,7 @@ const Projects: React.FC = () => {
         "This App Manages Tickets for Web Development. I worked with CMD CNTR for all of 2022, helping with frontend styling of the app that was being developed. In addition I cleaned up and mainted this site, consistently adding blog posts, using lottie animations, and improving the overall look of the site.",
       technologies: "React, Tailwind CSS, Gatsby, DaisyUI",
       image: commandcenter,
-      color: "bg-c-green-darker",
+      color: `bg-c-${colorScheme}-dark`,
     },
     {
       title: "Big Run Wolf",
@@ -69,7 +74,7 @@ const Projects: React.FC = () => {
         "Wildlife Ranch with Events and Animal Education. I was tasked with maintaining and upkeep of this site, producing event pages, and updating information related to policies. I'm fond of this project because I have a fascination with different kinds of animals.",
       technologies: "WordPress, Elementor",
       image: brwr,
-      color: "bg-stone-800",
+      color: `bg-c-${colorScheme}-darker`,
     },
     // {
     //   title: "Human to Whale Speech",
@@ -89,15 +94,17 @@ const Projects: React.FC = () => {
     // },
   ];
 
-  const [activeProject, setActiveProject] = useState(0); // Initialize activeProject to 0
+  const [activeProject, setActiveProject] = useState(0);
 
   return (
-    <div id="projects-section" className="bg-c-gray h-screen min-w-full ">
+    <div id="projects-section" className={`bg-c-blue-gray h-screen min-w-full`}>
       <section
         className="flex flex-row h-screen overflow-x-auto overflow-y-hidden bg-stone-800"
-        onMouseLeave={() => setActiveProject(0)} // Set activeProject to 0 when mouse leaves the section
+        onMouseLeave={() => setActiveProject(0)}
       >
-        <h3 className="right-12 font-bold pt-12 text-c-gray text-4xl absolute ">
+        <h3
+          className={`right-12 font-bold pt-12 text-c-${colorScheme}-gray text-4xl absolute`}
+        >
           Projects
         </h3>
         {projects.map((project, index) => (
@@ -118,8 +125,8 @@ const Projects: React.FC = () => {
                         "Command Center",
                         "Big Run Wolf",
                       ].includes(project.title)
-                        ? "text-c-gray"
-                        : "text-stone-700"
+                        ? `text-c-${colorScheme}-gray`
+                        : `text-${colorScheme}-dark`
                     }`}
                   >
                     <p className="font-bold text-3xl mb-6">{project.title}</p>
@@ -130,7 +137,6 @@ const Projects: React.FC = () => {
                   </div>
                 )}
               </div>
-
               <a
                 href={project.href}
                 target="_blank"
