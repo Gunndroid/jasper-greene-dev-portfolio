@@ -99,14 +99,15 @@ const Projects: React.FC<ProjectProps> = ({ colorScheme }) => {
   return (
     <div id="projects-section" className={`bg-c-blue-gray h-screen min-w-full`}>
       <section
-        className="flex flex-row h-full sm:h-screen overflow-x-auto overflow-y-hidden bg-stone-800"
+        className={`flex flex-row h-full sm:h-screen overflow-x-auto overflow-y-hidden bg-c-${colorScheme}-darker`}
         onMouseLeave={() => setActiveProject(0)}
       >
         <h3
-          className={`right-12 font-bold sm:pt-10 pt-4 md:pt-12 text-c-${colorScheme}-darker sm:text-c-${colorScheme}-gray md:text-4xl sm:text-3xl text-xl absolute`}
+          className={`right-12 font-bold sm:pt-10 pt-4 md:pt-12 opacity-50 cursor-default text-c-${colorScheme}-lighter sm:text-c-${colorScheme}-light md:text-4xl sm:text-3xl text-xl absolute`}
         >
           Projects
         </h3>
+
         {projects.map((project, index) => (
           <div
             onMouseEnter={() => setActiveProject(index)}
