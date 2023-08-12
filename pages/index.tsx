@@ -9,7 +9,8 @@ import Footer from "@/components/footer";
 import ColorToggleBtn from "@/components/colorButton";
 
 const Home: React.FC = () => {
-  const [colorScheme, setColorScheme] = useState("green"); // default is 'green'
+  const [colorScheme, setColorScheme] = useState("purple"); // default is 'green'
+  const [isNavShow, setIsNavShow] = useState(false);
 
   const toggleColorScheme = (targetColor: any) => {
     if (colorScheme !== targetColor) {
@@ -27,7 +28,7 @@ const Home: React.FC = () => {
 
   return (
     <div
-      className={`bg-c-${colorScheme}-medium relative transition-all duration-700 ease-in-out`}
+      className={`bg-c-${colorScheme}-medium relative transition-all duration-700 ease-in-out `}
     >
       <div className="flex space-x-2 fixed top-5 right-5 z-[100]">
         <ColorToggleBtn
@@ -50,12 +51,26 @@ const Home: React.FC = () => {
       </div>
 
       <main>
-        <Header colorScheme={colorScheme} />
-        <Landing colorScheme={colorScheme} />
-        <About colorScheme={colorScheme} />
-        <Skills colorScheme={colorScheme} />
-        <Projects colorScheme={colorScheme} />
-        <Footer colorScheme={colorScheme} />
+        {/* <Header colorScheme={colorScheme} /> */}
+        <Header
+          colorScheme={colorScheme}
+          isNavShow={isNavShow}
+          setIsNavShow={setIsNavShow}
+        />
+
+        <div
+          className={`${
+            isNavShow
+              ? "blur-[5px] sm:blur-none transition-all duration-500"
+              : "transition-all duration-500"
+          }`}
+        >
+          <Landing colorScheme={colorScheme} />
+          <About colorScheme={colorScheme} />
+          <Skills colorScheme={colorScheme} />
+          <Projects colorScheme={colorScheme} />
+          <Footer colorScheme={colorScheme} />
+        </div>
 
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

@@ -9,9 +9,9 @@ const About: React.FC<AboutProps> = ({ colorScheme }) => {
   return (
     <main
       id="about-section"
-      className={`flex flex-col items-center justify-center h-screen text-justify bg-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
+      className={`flex flex-col items-center justify-center md:min-h-screen text-justify bg-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
     >
-      <div className="text-lg w-2/3">
+      <div className="text-lg w-full sm:w-3/4 p-12  overflow-y-auto ">
         <h1
           className={`text-4xl mb-8 text-c-${colorScheme}-medium font-bold transition-all duration-700 ease-in-out`}
         >

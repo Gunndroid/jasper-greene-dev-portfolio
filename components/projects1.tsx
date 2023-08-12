@@ -44,9 +44,9 @@ const Projects: React.FC<ProjectProps> = ({ colorScheme }) => {
       title: "American RFID Solutions",
       href: "https://stg-americanrfidsolutionscom-staging.kinsta.cloud/",
       description:
-        "RFID Ecommerce Site Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Donec in efficitur ipsum. Proin a diam et dui fermentum molestie non id neque. Duis at venenatis eros, eget lacinia elit.",
-      technologies: "Wordpress and Elementor",
-      image: ars, // Replace with the appropriate image
+        "For this American RFID Company, I built an entirely new landing page. Mockups, updated brand messaging, modernized styling and even some MidJourney AI generated art was used for backgrounds and testimonial profile pictures.",
+      technologies: "Wordpress and Elementor, PHP",
+      image: ars,
       color: `bg-c-${colorScheme}-light`,
     },
     {
@@ -99,53 +99,58 @@ const Projects: React.FC<ProjectProps> = ({ colorScheme }) => {
   return (
     <div id="projects-section" className={`bg-c-blue-gray h-screen min-w-full`}>
       <section
-        className="flex flex-row h-screen overflow-x-auto overflow-y-hidden bg-stone-800"
+        className="flex flex-row h-full sm:h-screen overflow-x-auto overflow-y-hidden bg-stone-800"
         onMouseLeave={() => setActiveProject(0)}
       >
         <h3
-          className={`right-12 font-bold pt-12 text-c-${colorScheme}-gray text-4xl absolute`}
+          className={`right-12 font-bold sm:pt-10 pt-4 md:pt-12 text-c-${colorScheme}-darker sm:text-c-${colorScheme}-gray md:text-4xl sm:text-3xl text-xl absolute`}
         >
           Projects
         </h3>
         {projects.map((project, index) => (
           <div
             onMouseEnter={() => setActiveProject(index)}
-            className={`flex flex-col items-center justify-center transition-all duration-700 ease-in-out ${
+            className={`flex flex-col items-center justify-center transition-all duration-700 ease-in-out  ${
               project.color
-            } ${activeProject === index ? "w-full" : "w-14"}`}
+            } ${activeProject === index ? "w-full" : "sm:w-14"}`}
             key={project.title}
           >
-            <div className="flex flex-row items-center justify-center w-full ">
-              <div className="flex flex-col text-center ml-20">
+            {/* Div holding image and text */}
+            <div className="flex flex-col lg:flex-row items-start md:items-center justify-center w-11/12  ">
+              <div className="flex flex-col items-center text-center ml-4 sm:ml-10 mb-2 md:mb-0 ">
                 {activeProject === index && (
+                  // Project Title and Desc
                   <div
-                    className={`w-5/6 text-justify ${
+                    className={`sm:w-5/6 text-left lg:text-justify ${
                       [
                         "PuffWizz NFT",
                         "Command Center",
                         "Big Run Wolf",
                       ].includes(project.title)
                         ? `text-c-${colorScheme}-gray`
-                        : `text-${colorScheme}-dark`
+                        : `text-c-${colorScheme}-darker`
                     }`}
                   >
-                    <p className="font-bold text-3xl mb-6">{project.title}</p>
-                    <div className="text-md">
-                      <div className="mb-4">{project.description}</div>
-                      <i>{project.technologies}</i>
+                    <p className="font-bold sm:text-lg text-xl md:text-3xl mb-6 p-2 whitespace-nowrap mt-20">
+                      {project.title}
+                    </p>
+                    <div className=" text-lg mb-12 lg:mb-0 text-justify ">
+                      <div className="mb-4 p-2">{project.description}</div>
+                      <i className="p-2">{project.technologies}</i>
                     </div>
                   </div>
                 )}
               </div>
+              {/* IMAGE AS LINK */}
               <a
                 href={project.href}
                 target="_blank"
                 rel="noreferrer"
-                className="h-5/6 flex items-center justify-center"
+                className="h-5/6 flex items-center justify-center mb-20 sm:mb-0"
               >
                 {activeProject === index && project.image && (
                   <Image
-                    className={`project-image rounded-md shadow-black shadow-md w-11/12 mr-16 ${
+                    className={`project-image rounded-md shadow-black shadow-md w-10/12 mt-4   min-w-[10rem] ${
                       index === 0
                         ? "filter grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
                         : ""

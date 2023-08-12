@@ -38,14 +38,14 @@ const SkillsAndServices: React.FC<SkillsAndServicesProps> = ({
   return (
     <main
       id="skills-section"
-      className={`bg-c-${colorScheme}-dark text-c-green-gray h-screen flex items-center justify-center transition-all duration-700 ease-in-out`}
+      className={`bg-c-${colorScheme}-dark text-c-green-gray  flex lg:flex-row flex-col md:min-h-screen lg:py-0 pt-[5rem] pb-[3rem] items-center justify-center transition-all duration-700 ease-in-out`}
     >
       <section
-        className={`w-1/2 flex flex-col items-center py-10 border-r border-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
+        className={`sm:w-1/2 flex flex-col items-center py-10 lg:border-r lg:border-c-${colorScheme}-gray transition-all duration-700 ease-in-out mb-12 sm:mb-20 lg:mb-0  `}
       >
-        <div className="skills-container">
+        <div className="relative flex justify-center items-center w-[350px] h-[350px]">
           <h1
-            className={`skills-text text-c-${colorScheme}-gray text-4xl font-bold text-center mb-10 transition-all duration-700 ease-in-out`}
+            className={`absolute z-10 flex text-c-${colorScheme}-gray sm:text-4xl text-4xl font-bold text-center transition-all duration-700 ease-in-out m-0 my-auto`}
           >
             Skills
           </h1>
@@ -53,34 +53,32 @@ const SkillsAndServices: React.FC<SkillsAndServicesProps> = ({
           <style>
             {`
 
-.skills-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 350px;
-  height: 350px;
-  margin: 0 auto;
-}
 
-.skills-text {
-  position: absolute;
-  z-index: 1;
-}
+// .circle-container {
+//   position: relative;
+//   width: 350px;
+//   height: 350px;
+//   margin: 0 auto;
+// }
 
 .circle-container {
   position: relative;
   width: 350px;
   height: 350px;
   margin: 0 auto;
+  display: flex;
+  align-items: center; // This vertically centers the children
+  justify-content: center; // This horizontally centers the children
 }
 
+
+/* Default values for mobile sizes */
 .icon-container {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  left: 40%;
-  top: 40%;
+  width: 50px;    /* Smaller size for mobile */
+  height: 50px;   /* Smaller size for mobile */
+  // left:43%;
+  // top:44%;
   transform-origin: top center;
   animation-duration: 200s;
   animation-timing-function: linear;
@@ -88,8 +86,8 @@ const SkillsAndServices: React.FC<SkillsAndServicesProps> = ({
 }
 
 .icon {
-  width: 65px;
-  height: 65px;
+  width: 50px;    /* Smaller size for mobile */
+  height: 50px;   /* Smaller size for mobile */
   transform-origin: top center;
   filter: grayscale(100%);
   transition: filter 0.3s;
@@ -98,6 +96,7 @@ const SkillsAndServices: React.FC<SkillsAndServicesProps> = ({
 .icon:hover {
   filter: grayscale(0%);
 }
+
 
 ${icons
   .map(
@@ -110,24 +109,69 @@ ${icons
   0%, 100% {
     transform: rotate(${
       (360 / icons.length) * index
-    }deg) translateY(-180px) rotate(${(-360 / icons.length) * index}deg);
+    }deg) translateY(-150px) rotate(${
+      (-360 / icons.length) * index
+    }deg); /* Adjusted translateY value for smaller screens */
   }
   60% {
     transform: rotate(${
       (360 / icons.length) * index + 180
-    }deg) translateY(-180px) rotate(${(-360 / icons.length) * index - 180}deg);
+    }deg) translateY(-150px) rotate(${(-360 / icons.length) * index - 180}deg);
   }
 }
 `
   )
   .join("\n")}
-       transition-all duration-700 ease-in-out`}
+
+/* Adjustments for medium (tablet) sizes */
+@media (min-width: 650px) {
+  .icon-container {
+    width: 65px;
+    height: 65px;
+  }
+  .icon {
+    width: 65px;
+    height: 65px;
+  }
+
+
+
+
+
+
+
+
+
+  ${icons
+    .map(
+      (_, index) => `
+  @keyframes rotate-${index} {
+    0%, 100% {
+      transform: rotate(${
+        (360 / icons.length) * index
+      }deg) translateY(-210px) rotate(${
+        (-360 / icons.length) * index
+      }deg); /* Original translateY value */
+    }
+    60% {
+      transform: rotate(${
+        (360 / icons.length) * index + 180
+      }deg) translateY(-210px) rotate(${
+        (-360 / icons.length) * index - 180
+      }deg);
+    }
+  }
+  `
+    )
+    .join("\n")}
+} transition-all duration-700 ease-in-out`}
           </style>
-          <div className="circle-container">
+
+          <div className="circle-container flex justify-center ">
             {icons.map((item, index) => (
               <div
                 key={index}
-                className={`icon-container icon-${index} transition-all duration-700 ease-in-out`}
+                className={`icon-container relative w-[350px] h-[350px] sm:w-28 sm:h-28 lg:w-40 lg:h-40 icon-${index} transition-all duration-700 ease-in-out`}
               >
                 <img className="icon" src={item.src} alt={item.alt} />
               </div>
@@ -135,8 +179,10 @@ ${icons
           </div>
         </div>
       </section>
+
+      {/* ---------------------- SERVICES --------------------- */}
       <section
-        className={`w-1/2 flex flex-col items-center py-10 text-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
+        className={` lg:w-1/2 w-full flex flex-col items-center py-10 text-c-${colorScheme}-gray transition-all duration-700 ease-in-out `}
       >
         <h1
           className={`text-4xl font-bold text-center mb-10 text-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
@@ -144,7 +190,7 @@ ${icons
           Services
         </h1>
         <table
-          className={`border border-c-green-gray text-center text-xl mx-auto w-2/3 text-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
+          className={`border border-c-${colorScheme}-gray text-center text-xl mx-auto w-[90%] sm:w-2/3 text-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
         >
           <tbody>
             {services.map((service, index) => (

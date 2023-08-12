@@ -4,10 +4,26 @@ import Link from "next/link";
 
 interface HeaderProps {
   colorScheme: string;
+  isNavShow: boolean;
+  setIsNavShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
-const Header: React.FC<HeaderProps> = ({ colorScheme }) => {
+
+const Header: React.FC<HeaderProps> = ({
+  colorScheme,
+  isNavShow,
+  setIsNavShow,
+}) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  // const [isNavShow, setIsNavShow] = useState(false);
+
+  // const toggleMobileMenu = () => {
+  //   setIsNavShow(!isNavShow);
+  // };
+
+  const toggleMobileMenu = () => {
+    setIsNavShow((prevState) => !prevState);
+  };
 
   useEffect(() => {
     let lastY = 0;
@@ -48,46 +64,95 @@ const Header: React.FC<HeaderProps> = ({ colorScheme }) => {
   }, []);
   const openModal = () => {
     setModalOpen(true);
+    setIsNavShow(false); // Close the mobile menu when the modal opens
   };
 
   const closeModal = () => {
     setModalOpen(false);
   };
+
   return (
     <>
       <nav
-        className={`bg-transparent fixed top-0 w-full ml-10 flex justify-left h-10 ${
+        className={`bg-transparent fixed top-0 w-full sm:ml-10  sm:flex justify-left z-[] h-10 ${
           activeSection === "about-section" ||
           activeSection === "projects-section"
             ? `text-c-${colorScheme}-darker`
             : `text-c-${colorScheme}-gray`
-        } items-center z-50`}
+        } items-center z-20`}
       >
-        <div className="flex space-x-10 mr-8 mt-5">
-          <Link legacyBehavior href="#home-section">
-            <a className="w-fit text-center mx-auto">Home</a>
-          </Link>
-          <Link legacyBehavior href="#about-section">
-            <a className="w-fit mx-auto">About</a>
-          </Link>
+        {/* mobile nav */}
+        <div className="relative">
+          <div
+            className={`text-4xl absolute cursor-pointer sm:hidden m-4 z-50 text-c-${colorScheme}-light opacity-80 `}
+            onClick={toggleMobileMenu}
+          >
+            {isNavShow ? "×" : "☰"}
+          </div>
 
-          <Link legacyBehavior href="#skills-section">
-            <a className="w-fit mx-auto">Skills</a>
-          </Link>
-          <Link legacyBehavior href="#projects-section">
-            <a className="w-fit mx-auto">Projects</a>
-          </Link>
+          {isNavShow && (
+            <div
+              className={`sm:hidden fixed top-0 flex flex-col justify-center items-center gap-4 p-5 w-full shadow-2xl bg-c-${colorScheme}-darker  transition-all text-c-green-gray sm:text-c-${colorScheme}-darker `}
+            >
+              <Link href="#home-section">
+                <span className="hover:scale-110 transition-all">Home</span>
+              </Link>
+              <Link href="#about-section">
+                <span className="hover:scale-110 transition-all">About</span>
+              </Link>
+              <Link href="#skills-section">
+                <span className="hover:scale-110 transition-all">Skills</span>
+              </Link>
+              <Link href="#projects-section">
+                <span className="hover:scale-110 transition-all">Projects</span>
+              </Link>
+              <a
+                onClick={openModal}
+                className="hover:scale-110 transition-all cursor-pointer"
+              >
+                Resume
+              </a>
+            </div>
+          )}
+        </div>
 
-          <a onClick={openModal} className="w-fit mx-auto cursor-pointer">
+        {/* desktop nav */}
+        <div
+          className={`hidden sm:flex space-x-10 mr-8 mt-5 text-${colorScheme}-light`}
+        >
+          <Link href="#home-section">
+            <span className="w-fit text-center mx-auto hover:scale-110 transition-all">
+              Home
+            </span>
+          </Link>
+          <Link href="#about-section">
+            <span className="w-fit mx-auto hover:scale-110 transition-all">
+              About
+            </span>
+          </Link>
+          <Link href="#skills-section">
+            <span className="w-fit mx-auto hover:scale-110 transition-all">
+              Skills
+            </span>
+          </Link>
+          <Link href="#projects-section">
+            <span className="w-fit mx-auto hover:scale-110 transition-all">
+              Projects
+            </span>
+          </Link>
+          <a
+            onClick={openModal}
+            className="w-fit mx-auto hover:scale-110 transition-all cursor-pointer"
+          >
             Resume
           </a>
         </div>
       </nav>
 
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 ">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[100] ">
           <div
-            className={`bg-c-${colorScheme}-gray pt-10 pb-4 px-4 rounded-lg relative h-[95%] w-1/2`}
+            className={`bg-c-${colorScheme}-gray pt-10 pb-4 px-4 rounded-lg relative h-[95%] md:w-1/2 w-full`}
           >
             <embed
               src="/GunnarCurryResume_GameGrid.pdf"

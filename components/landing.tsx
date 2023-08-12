@@ -53,7 +53,9 @@ const Landing: React.FC<LandingProps> = ({ colorScheme }) => {
   return (
     <div
       id="home-section"
-      className={`bg-c-${colorScheme}-dark h-screen w-full flex items-center relative  transition-all duration-700 ease-in-out`}
+      className={`bg-c-${colorScheme}-dark h-screen w-full flex transition-all duration-700 ease-in-out relative
+      items-center sm:flex-row flex-col  justify-between
+      md:px-10 px-4 xss:pl-[7px] xss:pr-0`}
     >
       {showSuccessMessage && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
@@ -69,7 +71,7 @@ const Landing: React.FC<LandingProps> = ({ colorScheme }) => {
         </div>
       )}
       <div
-        className={`text-c-${colorScheme}-gray w-1/3 ml-32 transition-all duration-700 ease-in-out`}
+        className={`text-c-${colorScheme}-gray pl-4 md:ml-32 pt-[12rem] sm:pt-0  w-full z-10 transition-all duration-700 ease-in-out`}
       >
         <p>Hello, my name is</p>
         <h2 className="text-5xl font-bold mb-2">Gunnar Curry</h2>
@@ -86,14 +88,14 @@ const Landing: React.FC<LandingProps> = ({ colorScheme }) => {
       <div className="absolute bottom-0 right-0 ">
         <img
           src="../img/gunnarEdit.png"
-          className="w-[100vh] opacity-90"
+          className="md:w-[100vh] sm:w-[30rem] w-[25rem] opacity-90"
           alt="Image of Gunnar Curry, the Developer of the portfolio."
         />
       </div>
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center ">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-20">
           <div
-            className={`bg-c-${colorScheme}-gray p-8 rounded w-1/3 transition-all duration-700 ease-in-out`}
+            className={`bg-c-${colorScheme}-gray p-8 rounded md:w-1/3 w-full transition-all duration-700 ease-in-out`}
           >
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-4">

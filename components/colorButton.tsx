@@ -28,7 +28,7 @@ const ColorToggleBtn: React.FC<ColorToggleBtnProps> = ({
     <div className="relative">
       <button
         onClick={() => setShowDropdown(!showDropdown)}
-        className={`rounded-full p-2 bg-c-green-gray transition-all duration-300 `}
+        className={`rounded-full p-2 bg-c-green-gray transition-all duration-300 opacity-70`}
         aria-label="Open color dropdown"
       >
         <svg

@@ -9,25 +9,30 @@ const Footer: React.FC<FooterProps> = ({ colorScheme }) => (
     className={`bg-c-${colorScheme}-dark text-c-${colorScheme}-gray transition-all duration-700 ease-in-out`}
   >
     <section className="p-7 flex flex-col items-center justify-center  w-full  ">
-      <div className="flex flex-row justify-between w-10/12 pt-16">
+      <div className="flex sm:flex-row flex-col gap-3 justify-between sm:w-10/12 pt-16 ">
         {/* Column 1 */}
-        <div className="ml-10">
-          <h2 className="text-3xl font-bold mb-2">Need a Developer?</h2>
+        <div className="md:ml-10 text-center sm:text-left mb-10 sm:mb-0">
+          <h2 className="md:text-3xl text-2xl font-bold mb-2">
+            Need a Developer?
+          </h2>
           <p className="mb-4">Let&apos;s build something awesome together.</p>
           <a href="mailto:gunnarcurry@icloud.com" className="underline">
             gunnarcurry@icloud.com
           </a>
         </div>
         {/* Column 2 */}
-        <div className="mr-10">
+        <div className="md:mr-10 text-center">
           <div className="">
-            <h3 className="text-3xl font-bold mb-2">Socialize With Me</h3>
-            <div className="flex justify-center space-x-10 mt-4">
+            <h3 className="md:text-3xl text-2xl font-bold mb-4 sm:ml-0 ">
+              Socialize With Me
+            </h3>
+            <div className="flex gap-10 sm:gap-0 sm:justify-between justify-center flex-wrap ">
               {/* GitHub */}
               <a
                 href="https://github.com/Gunndroid"
                 target="_blank"
                 rel="noreferrer"
+                className="hover:scale-110 transition-all"
               >
                 <div className="w-10">
                   <svg
@@ -83,6 +88,7 @@ const Footer: React.FC<FooterProps> = ({ colorScheme }) => (
                 href="https://www.linkedin.com/in/gunnarlukari/"
                 target="_blank"
                 rel="noreferrer"
+                className="hover:scale-110 transition-all"
               >
                 <div className="w-10">
                   <svg
@@ -121,8 +127,11 @@ const Footer: React.FC<FooterProps> = ({ colorScheme }) => (
                 </div>
               </a>
               {/* Email */}
-              <a href="mailto:gunnarcurry@icloud.com">
-                <div className="w-10">
+              <a
+                href="mailto:gunnarcurry@icloud.com"
+                className="hover:scale-110 transition-all"
+              >
+                <div className="w-10 ">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
