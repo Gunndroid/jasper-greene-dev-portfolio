@@ -84,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({
         {/* mobile nav */}
         <div className="relative">
           <div
-            className={`text-4xl absolute cursor-pointer sm:hidden m-4 z-50 text-c-${colorScheme}-light opacity-80 `}
+            className={`text-4xl absolute cursor-pointer sm:hidden m-4 z-50 text-c-${colorScheme}-light  `}
             onClick={toggleMobileMenu}
           >
             {isNavShow ? "×" : "☰"}

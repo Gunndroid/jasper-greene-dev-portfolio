@@ -103,7 +103,7 @@ const Projects: React.FC<ProjectProps> = ({ colorScheme }) => {
         onMouseLeave={() => setActiveProject(0)}
       >
         <h3
-          className={`right-12 font-bold sm:pt-10 pt-4 md:pt-12 opacity-50 cursor-default text-c-${colorScheme}-lighter sm:text-c-${colorScheme}-light md:text-4xl sm:text-3xl text-xl absolute`}
+          className={`right-10 font-bold sm:pt-10 pt-4 md:pt-12  cursor-default text-c-${colorScheme}-darker md:text-c-green-gray md:text-4xl sm:text-3xl text-xl absolute`}
         >
           Projects
         </h3>
