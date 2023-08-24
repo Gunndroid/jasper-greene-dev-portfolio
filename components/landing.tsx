@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "../app/globals.css";
@@ -54,8 +55,13 @@ const Landing: React.FC<LandingProps> = ({ colorScheme }) => {
     <div
       id="home-section"
       className={`bg-c-${colorScheme}-dark h-screen w-full flex transition-all duration-700 ease-in-out relative
-      items-center sm:flex-row flex-col  justify-between
-      md:px-10 px-4 xss:pl-[7px] xss:pr-0`}
+      items-center
+      sm:flex-row
+      flex-col
+      md:px-10 
+      `}
+
+      // px-4 xss:pl-[7px] xss:pr-0       justify-between
     >
       {showSuccessMessage && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
@@ -88,7 +94,7 @@ const Landing: React.FC<LandingProps> = ({ colorScheme }) => {
       <div className="absolute bottom-0 right-0 ">
         <img
           src="../img/gunnarEdit.png"
-          className="md:w-[100vh] sm:w-[30rem] w-[25rem] opacity-90"
+          className="md:w-[70vh] sm:w-[30rem] w-[25rem] opacity-90"
           alt="Image of Gunnar Curry, the Developer of the portfolio."
         />
       </div>
