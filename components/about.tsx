@@ -34,7 +34,7 @@ const About: React.FC<AboutProps> = ({ colorScheme }) => {
           <p className="mb-4">That&apos;s how this all began.</p>
           <br />
           <p className="mb-4">
-            At present, I find myself working with React and Next.js,
+            At present, I find myself working with Next.js and Typescript
             complemented by Tailwind CSS. These tools enable me to craft
             visually stunning and responsive user interfaces that not only
             please the eye but also provide functionality.

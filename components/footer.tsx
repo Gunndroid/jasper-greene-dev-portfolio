@@ -227,6 +227,9 @@ const Footer: React.FC<FooterProps> = ({ colorScheme }) => (
         <p className="cursor-default text-md">
           ©GunnarCurry{new Date().getFullYear()}
         </p>
+        <p className="p-2 italic text-md">
+          Created with NextJS, Typescript and Tailwind
+        </p>
       </div>
     </footer>
   </div>
