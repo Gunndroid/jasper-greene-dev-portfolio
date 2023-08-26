@@ -10,6 +10,7 @@ import random_color from "../public/img/random_color.png";
 import f1 from "../public/img/f1cuts.png";
 import brwr from "../public/img/brwr.png";
 import lbk from "../public/img/lbk2.png";
+import mesaku from "../public/img/mesaku.png";
 import ars from "../public/img/ARS.png";
 // import swm from "../public/img/sport.png";
 
@@ -22,14 +23,23 @@ interface ProjectProps {
 const Projects: React.FC<ProjectProps> = ({ colorScheme }) => {
   const projects = [
     {
-      title: "Lil Bird Kitchens",
-      href: "https://lilbirdkitchens.com/",
+      title: "Mesaku Sushi",
+      href: "https://mesaku.vercel.app/",
       description:
-        "Vegetable Mixes Ecommerce Site. This project consisted of building a food-based ecommerce store from the ground up. I was tasked with improving the branding image and message, creating the products, and giving the business an online voice. Everything from adding to cart to submitting the checkout, I made successfully functional.",
-      technologies: "WordPress, Elementor",
-      image: lbk,
+        "This project represents a modern overhaul of the Mesaku Sushi website. By leveraging cutting-edge technology, I've optimized its performance, enhanced SEO, and streamlined user navigation to offer an improved and seamless experience.",
+      technologies: "NextJS, Tailwind, Typescript",
+      image: mesaku,
       color: `bg-c-${colorScheme}-gray`,
     },
+    // {
+    //   title: "Lil Bird Kitchens",
+    //   href: "https://lilbirdkitchens.com/",
+    //   description:
+    //     "Vegetable Mixes Ecommerce Site. This project consisted of building a food-based ecommerce store from the ground up. I was tasked with improving the branding image and message, creating the products, and giving the business an online voice. Everything from adding to cart to submitting the checkout, I made successfully functional.",
+    //   technologies: "WordPress, Elementor",
+    //   image: lbk,
+    //   color: `bg-c-${colorScheme}-gray`,
+    // },
 
     // {
     //   title: "F1 Cuts",
