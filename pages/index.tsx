@@ -9,7 +9,7 @@ import Footer from "@/components/footer";
 import ColorToggleBtn from "@/components/colorButton";
 
 const Home: React.FC = () => {
-  const [colorScheme, setColorScheme] = useState("purple"); // default is 'green'
+  const [colorScheme, setColorScheme] = useState("blue"); // default is 'green'
   const [isNavShow, setIsNavShow] = useState(false);
 
   const toggleColorScheme = (targetColor: any) => {

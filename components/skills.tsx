@@ -28,6 +28,10 @@ const SkillsAndServices: React.FC<SkillsAndServicesProps> = ({
     { src: "/icons/Tailwind.svg", alt: "tailwind icon" },
     { src: "/icons/sass2.png", alt: "sass icon" },
     { src: "/icons/js.png", alt: "javascript icon" },
+    {
+      src: "https://thenounproject.com/api/private/icons/980456/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0",
+      alt: "wordpress icon",
+    },
     { src: "/icons/react.png", alt: "react icon" },
     { src: "/icons/node.png", alt: "node.js icon" },
     { src: "/icons/git.png", alt: "git icon" },

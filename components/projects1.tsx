@@ -12,6 +12,7 @@ import brwr from "../public/img/brwr.png";
 import lbk from "../public/img/lbk2.png";
 import mesaku from "../public/img/mesaku.png";
 import ars from "../public/img/ARS.png";
+import lingoWorld from "../public/img/lingoWorld.png";
 // import swm from "../public/img/sport.png";
 
 // Images imported here
@@ -23,13 +24,22 @@ interface ProjectProps {
 const Projects: React.FC<ProjectProps> = ({ colorScheme }) => {
   const projects = [
     {
+      title: "LingoWorld",
+      href: "https://lingoworld.vercel.app/",
+      description:
+        "LingoWorld was envisioned as a digital bridge to connect language enthusiasts from around the world. Built with a modern tech stack, it showcases the passion for community building and cross-cultural interactions.",
+      technologies: "NextJS, Tailwind, Typescript",
+      image: lingoWorld,
+      color: `bg-c-${colorScheme}-gray`,
+    },
+    {
       title: "Mesaku Sushi",
       href: "https://mesaku.vercel.app/",
       description:
         "This project represents a modern overhaul of the Mesaku Sushi website. By leveraging cutting-edge technology, I've optimized its performance, enhanced SEO, and streamlined user navigation to offer an improved and seamless experience.",
       technologies: "NextJS, Tailwind, Typescript",
       image: mesaku,
-      color: `bg-c-${colorScheme}-gray`,
+      color: `bg-c-${colorScheme}-light`,
     },
     // {
     //   title: "Lil Bird Kitchens",
@@ -50,15 +60,15 @@ const Projects: React.FC<ProjectProps> = ({ colorScheme }) => {
     //   image: f1,
     //   color: "bg-c-green-light",
     // },
-    {
-      title: "American RFID Solutions",
-      href: "https://stg-americanrfidsolutionscom-staging.kinsta.cloud/",
-      description:
-        "For this American RFID Company, I built an entirely new landing page. Mockups, updated brand messaging, modernized styling and even some MidJourney AI generated art was used for backgrounds and testimonial profile pictures.",
-      technologies: "Wordpress and Elementor, PHP",
-      image: ars,
-      color: `bg-c-${colorScheme}-light`,
-    },
+    // {
+    //   title: "American RFID Solutions",
+    //   href: "https://stg-americanrfidsolutionscom-staging.kinsta.cloud/",
+    //   description:
+    //     "For this American RFID Company, I built an entirely new landing page. Mockups, updated brand messaging, modernized styling and even some MidJourney AI generated art was used for backgrounds and testimonial profile pictures.",
+    //   technologies: "Wordpress and Elementor, PHP",
+    //   image: ars,
+    //   color: `bg-c-${colorScheme}-light`,
+    // },
     {
       title: "PuffWizz NFT",
       href: "https://puffwizz-nft.vercel.app/",
