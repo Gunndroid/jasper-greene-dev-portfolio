@@ -155,7 +155,7 @@ const Header: React.FC<HeaderProps> = ({
             className={`bg-c-${colorScheme}-gray pt-10 pb-4 px-4 rounded-lg relative h-[95%] md:w-1/2 w-full`}
           >
             <embed
-              src="/GunnarCurryResume_GameGrid.pdf"
+              src="/GunnarCurryResume.pdf"
               type="application/pdf"
               className="w-full h-full rounded-md"
             />
