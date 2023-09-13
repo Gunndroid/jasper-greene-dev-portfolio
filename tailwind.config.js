@@ -91,7 +91,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "c-green-gray": "#DAD7CD",
+        "c-green-gray": "#f0efeb",
         "c-green-light": "#A3B18A",
         "c-green-medium": "#588157",
         "c-green-dark": "#3A5A40",
@@ -103,7 +103,7 @@ module.exports = {
         // "c-blue-dark": "#0077B6",
         // "c-blue-darker": "#03045E",
 
-        "c-blue-gray": "#DAD7CD",
+        "c-blue-gray": "#f0efeb",
         "c-blue-light": "#0582ca",
         "c-blue-medium": "#006494",
         "c-blue-dark": "#003554",
@@ -115,7 +115,7 @@ module.exports = {
         // "c-pastel-dark": "#ffd166",
         // "c-pastel-darker": "#ef476f",
 
-        "c-purple-gray": "#DAD7CD",
+        "c-purple-gray": "#f0efeb",
         "c-purple-light": "#be95c4",
         "c-purple-medium": "#9f86c0",
         "c-purple-dark": "#5e548e",

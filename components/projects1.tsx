@@ -13,6 +13,7 @@ import lbk from "../public/img/lbk2.png";
 import mesaku from "../public/img/mesaku.png";
 import ars from "../public/img/ARS.png";
 import lingoWorld from "../public/img/lingoWorld.png";
+import tropicool from "../public/img/tropicool.png";
 // import swm from "../public/img/sport.png";
 
 // Images imported here
@@ -33,13 +34,22 @@ const Projects: React.FC<ProjectProps> = ({ colorScheme }) => {
       color: `bg-c-${colorScheme}-gray`,
     },
     {
+      title: "Tropicool Treats",
+      href: "https://tropicooltreats.vercel.app/",
+      description:
+        "This project was inspired by a local Hawaiian Ice Creamery.",
+      technologies: "NextJS, Tailwind, Typescript",
+      image: tropicool,
+      color: `bg-c-${colorScheme}-light`,
+    },
+    {
       title: "Mesaku Sushi",
       href: "https://mesaku.vercel.app/",
       description:
         "This project represents a modern overhaul of the Mesaku Sushi website. By leveraging cutting-edge technology, I've optimized its performance, enhanced SEO, and streamlined user navigation to offer an improved and seamless experience.",
       technologies: "NextJS, Tailwind, Typescript",
       image: mesaku,
-      color: `bg-c-${colorScheme}-light`,
+      color: `bg-c-${colorScheme}-medium`,
     },
     // {
     //   title: "Lil Bird Kitchens",
@@ -76,17 +86,17 @@ const Projects: React.FC<ProjectProps> = ({ colorScheme }) => {
         "This was an origin project for me, the Puffwizz NFT project. It was this concept that sparked my interest in coding. I was very curious to build an NFT project and write my own Solidity Smart Contract. I wanted to understand how to read and write such contracts and thus this project was born.",
       technologies: "React, Solidity",
       image: puffwizz,
-      color: `bg-c-${colorScheme}-medium`,
-    },
-    {
-      title: "Command Center",
-      href: "https://cmdcntr.io/",
-      description:
-        "This App Manages Tickets for Web Development. I worked with CMD CNTR for all of 2022, helping with frontend styling of the app that was being developed. In addition I cleaned up and mainted this site, consistently adding blog posts, using lottie animations, and improving the overall look of the site.",
-      technologies: "React, Tailwind CSS, Gatsby, DaisyUI",
-      image: commandcenter,
       color: `bg-c-${colorScheme}-dark`,
     },
+    // {
+    //   title: "Command Center",
+    //   href: "https://cmdcntr.io/",
+    //   description:
+    //     "This App Manages Tickets for Web Development. I worked with CMD CNTR for all of 2022, helping with frontend styling of the app that was being developed. In addition I cleaned up and mainted this site, consistently adding blog posts, using lottie animations, and improving the overall look of the site.",
+    //   technologies: "React, Tailwind CSS, Gatsby, DaisyUI",
+    //   image: commandcenter,
+    //   color: `bg-c-${colorScheme}-dark`,
+    // },
     {
       title: "Big Run Wolf",
       href: "https://bigrunwolfranch.org/",
