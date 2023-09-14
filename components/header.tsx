@@ -142,7 +142,7 @@ const Header: React.FC<HeaderProps> = ({
           </Link>
           <a
             onClick={openModal}
-            className="w-fit mx-auto hover:scale-110 transition-all cursor-pointer"
+            className="w-fit mx-auto hover:scale-110 transition-all cursor-pointer border border-white rounded-lg px-2"
           >
             Resume
           </a>
