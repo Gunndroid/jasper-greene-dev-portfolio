@@ -166,7 +166,7 @@ const Header: React.FC<HeaderProps> = ({
               Close
             </button>
             <a
-              href="/GunnarCurryResume_GameGrid.pdf"
+              href="/GunnarCurryResume.pdf"
               download
               className={`absolute top-0 right-14 m-2 mr-4 text-c-${colorScheme}-dark`}
             >
