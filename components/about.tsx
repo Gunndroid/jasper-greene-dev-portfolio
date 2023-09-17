@@ -21,35 +21,29 @@ const About: React.FC<AboutProps> = ({ colorScheme }) => {
           className={`text-c-${colorScheme}-darker transition-all duration-700 ease-in-out`}
         >
           <p className="mb-4">
-            With a history in creativity, I&apos;ve dedicated several years of
-            my life to filmmaking and photography. Over time, I&apos;ve crafted
-            hundreds of illustrations and paintings, each reflecting my artistic
-            vision.
+            My journey into the intricate world of programming was sparked by an
+            interest in Solidity Smart Contracts. However, I soon recognized the
+            foundational importance of mastering Javascript, which marked the
+            inception of my coding odyssey.
           </p>
+
           <p className="mb-4">
-            My journey into programming began with a curiosity to understand
-            Solidity Smart Contracts. Upon attempting to decipher them, I
-            quickly realized the necessity to learn Javascript first.
+            Currently, my expertise lies in leveraging the capabilities of React
+            and Typescript, augmented by the finesse of Tailwind CSS. This suite
+            empowers me to design user interfaces that are not merely
+            aesthetically captivating but are also steeped in functionality. For
+            me, coding transcends the binary of zeros and ones—it stands as a
+            testament to my commitment to pioneering projects with tangible
+            impacts.
           </p>
-          <p className="mb-4">That&apos;s how this all began.</p>
-          <br />
+
           <p className="mb-4">
-            At present, I find myself working with Next.js and Typescript
-            complemented by Tailwind CSS. These tools enable me to craft
-            visually stunning and responsive user interfaces that not only
-            please the eye but also provide functionality.
-          </p>
-          <p className="mb-4">
-            My code is more than lines and syntax; it represents my endeavor to
-            create impactful projects that make a difference.
-          </p>
-          <br />
-          <p className="mb-4">
-            Beyond the digital realm, I am an devoted traveler. I&apos;ve had
-            the pleasure of exploring more than 25 countries, including diverse
-            destinations such as Ukraine, Brazil, and Japan. Each journey
-            extends my appreciation for learning and immersing myself in various
-            cultures.
+            Outside the confines of the digital sphere, I possess an unwavering
+            passion for travel. With footprints across over 25 nations, from the
+            historic lanes of Ukraine to the bustling streets of Brazil and the
+            serene landscapes of Japan, each expedition has enriched my
+            perspective, amplifying my zeal for continual learning and cultural
+            immersion.
           </p>
         </div>
       </div>
