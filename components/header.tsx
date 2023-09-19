@@ -155,7 +155,7 @@ const Header: React.FC<HeaderProps> = ({
             className={`bg-c-${colorScheme}-gray pt-10 pb-4 px-4 rounded-lg relative h-[95%] md:w-1/2 w-full`}
           >
             <embed
-              src="/GunnarCurryResume.pdf"
+              src="/GunnarCurryResume1.pdf"
               type="application/pdf"
               className="w-full h-full rounded-md"
             />
@@ -166,7 +166,7 @@ const Header: React.FC<HeaderProps> = ({
               Close
             </button>
             <a
-              href="/GunnarCurryResume.pdf"
+              href="/GunnarCurryResume1.pdf"
               download
               className={`absolute top-0 right-14 m-2 mr-4 text-c-${colorScheme}-dark`}
             >

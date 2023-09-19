@@ -3,8 +3,6 @@ import Image from "next/image";
 import React from "react";
 import portrait from "../public/img/gunnLukariAI.JPG";
 
-// import resume from "../media/GunnarCurryResume3.pdf";
-
 function ContactBox() {
   return (
     <div className="p-5">

@@ -161,12 +161,6 @@ const Contact: React.FC<ContactProps> = ({ colorScheme }) => (
             </a>
           </div>
         </div>
-        {/* <div className="mt-4">
-          <h3 className="text-xl font-bold mb-2">View My Resume</h3>
-          <a href="/GunnarCurryResume3.pdf" download className="underline">
-            Download
-          </a>
-        </div> */}
       </div>
     </div>
   </section>
