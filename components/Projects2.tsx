@@ -14,6 +14,10 @@ import mesaku from "../public/img/mesaku.png";
 import ars from "../public/img/ARS.png";
 import lingoWorld from "../public/img/lingoWorld.png";
 import tropicool from "../public/img/tropicool.png";
+import sport from "../public/img/sportwme.png";
+import fix30 from "../public/img/fix30small.jpg";
+import amorvia from "../public/img/amorvia.jpg";
+import hh from "../public/img/hh.png";
 
 // Assuming the same interface and projects array from Projects1
 interface ProjectProps {
@@ -25,6 +29,38 @@ const Projects2: React.FC<ProjectProps> = ({ colorScheme }) => {
 
   // Assuming the same projects array from Projects1
   const projects = [
+    {
+      title: "Amorvia: Connecting Travelers",
+      href: "",
+      description:
+        "LingoWorld was envisioned as a digital bridge to connect language enthusiasts from around the world. Built with a modern tech stack, it showcases the passion for community building and cross-cultural interactions.",
+      technologies: "React-Native",
+      image: amorvia,
+    },
+    {
+      title: "30fix: Habits and Wellness",
+      href: "https://apps.apple.com/us/app/30fix-habits-wellness/id6504657742",
+      description:
+        "LingoWorld was envisioned as a digital bridge to connect language enthusiasts from around the world. Built with a modern tech stack, it showcases the passion for community building and cross-cultural interactions.",
+      technologies: "React-Native",
+      image: fix30,
+    },
+    {
+      title: "HouseHound",
+      href: "https://househound.ai/main/home",
+      description:
+        "LingoWorld was envisioned as a digital bridge to connect language enthusiasts from around the world. Built with a modern tech stack, it showcases the passion for community building and cross-cultural interactions.",
+      technologies: "React",
+      image: hh,
+    },
+    {
+      title: "Sport with Me",
+      href: "https://sportwithme.vercel.app/",
+      description:
+        "LingoWorld was envisioned as a digital bridge to connect language enthusiasts from around the world. Built with a modern tech stack, it showcases the passion for community building and cross-cultural interactions.",
+      technologies: "React",
+      image: sport,
+    },
     {
       title: "LingoWorld",
       href: "https://lingoworld.vercel.app/",
@@ -106,8 +142,8 @@ const Projects2: React.FC<ProjectProps> = ({ colorScheme }) => {
           href={project.href}
           target='_blank'
           rel='noreferrer'
-          className='flex md:w-[600px] mx-auto justify-between items-center border border-white
-          p-1 rounded-[6px] transition-all duration-300 ease-in-out md:overflow-hidden md:my-20 my-8 hover:bg-emerald-800 bg-emerald-900'
+          className='flex md:w-[600px] md:mx-auto justify-between items-center border border-white
+          p-1 mx-2 rounded-[6px] transition-all duration-300 ease-in-out md:overflow-hidden md:my-20 my-8 hover:bg-emerald-800 bg-emerald-900'
         >
           {project.image && (
             <Image
