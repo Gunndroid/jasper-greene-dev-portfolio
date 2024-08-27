@@ -68,7 +68,7 @@ const Home: React.FC = () => {
           <Landing colorScheme={colorScheme} />
           {/* <About colorScheme={colorScheme} /> */}
           <Projects2 colorScheme={colorScheme} />
-          <Skills2 colorScheme={colorScheme} />
+          <Skills2  />
           <Footer colorScheme={colorScheme} />
         </div>
 
