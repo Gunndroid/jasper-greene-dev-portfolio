@@ -50,7 +50,7 @@ const Projects2: React.FC<ProjectProps> = ({ colorScheme }) => {
       image: f1,
     },
     {
-      title: "American RFID Solutions",
+      title: "American RFID",
       href: "https://stg-americanrfidsolutionscom-staging.kinsta.cloud/",
       description:
         "For this American RFID Company, I built an entirely new landing page. Mockups, updated brand messaging, modernized styling and even some MidJourney AI generated art was used for backgrounds and testimonial profile pictures.",
@@ -95,39 +95,29 @@ const Projects2: React.FC<ProjectProps> = ({ colorScheme }) => {
   ];
 
   return (
-    <div id='projects-section' className={` py-20`}>
-      <section
-        className={`flex flex-col gap-10 p-10`}
-        onMouseLeave={() => setActiveProject(0)}
-      >
-        {projects.map((project, index) => (
-          <div
-            onMouseEnter={() => setActiveProject(index)}
-            className={`flex flex-col items-center transition-all duration-700 ease-in-out h-[300px]  py-10  ${
-              activeProject === index ? "scale-105" : ""
-            }`}
-            key={project.title}
-          >
-            <a href={project.href} target='_blank' rel='noreferrer'>
-              {project.image && (
-                <Image
-                  className=' w-full rounded-md shadow-sm'
-                  src={project.image}
-                  alt={project.title}
-                  //   layout='responsive'
-                  //   width={10}
-                  //   height={10}
-                />
-              )}
-              <div className={`text-center mt-4 text-white`}>
-                <p className='font-bold text-lg'>{project.title}</p>
-                {/* <p className='text-sm'>{project.description}</p> */}
-                <i className='text-xs'>{project.technologies}</i>
-              </div>
-            </a>
+    <div id='projects-section' className={` border-t border-b border-white`}>
+      {projects.map((project, index) => (
+        <a
+          href={project.href}
+          target='_blank'
+          rel='noreferrer'
+          className='flex md:w-[600px] mx-auto justify-between items-center border border-white
+          p-1 rounded-[6px] transition-all duration-300 ease-in-out md:overflow-hidden md:my-20 my-8 hover:bg-emerald-800 bg-emerald-900'
+        >
+          {project.image && (
+            <Image
+              className='rounded-md shadow-sm w-60'
+              src={project.image}
+              alt={project.title}
+            />
+          )}
+          <div className={`text-right text-white md:pr-6 pr-2`}>
+            <p className='font-bold text-lg'>{project.title}</p>
+            <i className='text-xs'>{project.technologies}</i>
+            {/* <p className='text-sm'>{project.description}</p> */}
           </div>
-        ))}
-      </section>
+        </a>
+      ))}
     </div>
   );
 };

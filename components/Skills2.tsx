@@ -2,7 +2,7 @@ import React from "react";
 
 const Skills2 = () => {
   return (
-    <div className='text-lg text-white p-4'>
+    <div className='text-lg text-white p-4 border border-white rounded-[6px] m-4 to-emerald-700 from-emerald-900 bg-gradient-to-br py-20 px-6 my-10'>
       <h2 className='font-bold text-xl mb-2'>Skills & Technologies</h2>
       <ul className='list-disc pl-5 space-y-1'>
         <li>React Native</li>

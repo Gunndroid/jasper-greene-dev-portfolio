@@ -91,11 +91,11 @@ const Landing: React.FC<LandingProps> = ({ colorScheme }) => {
           Let&apos;s Talk
         </button> */}
       </div>
-      <div className='absolute bottom-0 right-0 '>
+      <div className='absolute bottom-0 right-0  '>
         <img
           src='../img/gunnarEdit.png'
           className='md:w-[70vh] sm:w-[30rem] w-[25rem] opacity-90'
-          alt='Image of Gunnar Curry, the Developer of the portfolio.'
+          alt='Image of Jasper Greene, the Developer of the portfolio.'
         />
       </div>
       {showModal && (
