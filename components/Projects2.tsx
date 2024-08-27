@@ -98,6 +98,7 @@ const Projects2: React.FC<ProjectProps> = ({ colorScheme }) => {
     <div id='projects-section' className={` border-t border-b border-white`}>
       {projects.map((project, index) => (
         <a
+          key={index}
           href={project.href}
           target='_blank'
           rel='noreferrer'
