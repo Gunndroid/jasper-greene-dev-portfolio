@@ -72,7 +72,13 @@ const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <>
+    <div className='w-full text-center  pt-6'>
+      <a
+        href='mailto:main@jasperxgreene.com'
+        className='underline text-emerald-400 '
+      >
+        main@jasperxgreene.com
+      </a>
       <nav
         className={`bg-transparent fixed top-0 w-full sm:ml-10  sm:flex justify-left h-10 items-center z-20 text-white`}
       >
@@ -170,7 +176,7 @@ const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
       )} */}
-    </>
+    </div>
   );
 };
 

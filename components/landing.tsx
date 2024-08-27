@@ -80,10 +80,11 @@ const Landing: React.FC<LandingProps> = ({ colorScheme }) => {
         className={`text-c-${colorScheme}-gray pl-4 md:ml-32 pt-[12rem] sm:pt-0  w-full z-10 transition-all duration-700 ease-in-out text-center`}
       >
         <h2 className='text-5xl font-semibold mb-2'>Jasper Greene</h2>
-        <h1 className='text-2xl font-thin'>React and React-Native Developer</h1>
-        <a href='mailto:main@jasperxgreene.com' className='underline'>
-          main@jasperxgreene.com
-        </a>
+        <h1 className='text-3xl font-thin'>App Development Specialist</h1>
+        <h1 className='text-xl font-light text-emerald-400'>
+          ReactJS + React-Native
+        </h1>
+
         {/* <button
           onClick={handleContactClick}
           className={`bg-c-${colorScheme}-gray text-c-${colorScheme}-dark px-4 py-2 rounded mt-4 transition-all duration-700 ease-in-out`}

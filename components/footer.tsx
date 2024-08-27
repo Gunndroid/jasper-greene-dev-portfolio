@@ -196,15 +196,15 @@ const Footer: React.FC<FooterProps> = ({ colorScheme }) => (
         </div>
       </div>
     </section> */}
-    <footer className='p-6 pt-10'>
+    <footer className='py-6'>
       <div
-        className={`text-center border-c-${colorScheme}-gray pt-6 border-t-[1px] transition-all duration-700 ease-in-out`}
+        className={`text-center border-c-${colorScheme}-gray pt-6  transition-all duration-700 ease-in-out`}
       >
         <a href='mailto:main@jasperxgreene.com' className='underline'>
           main@jasperxgreene.com
         </a>
         <p className='cursor-default text-md'>
-          ©Jasper Greene{new Date().getFullYear()}
+          ©JasperGreene{new Date().getFullYear()}
         </p>
       </div>
     </footer>

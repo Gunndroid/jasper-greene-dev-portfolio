@@ -46,7 +46,7 @@ const Projects2: React.FC<ProjectProps> = ({ colorScheme }) => {
       href: "https://f1-cuts.vercel.app/",
       description:
         "This App is a Video Marketing Agency. This app was made with react, it encompasses ",
-      technologies: "(React, Tailwind CSS)",
+      technologies: "React, Tailwind CSS",
       image: f1,
     },
     {
@@ -54,7 +54,7 @@ const Projects2: React.FC<ProjectProps> = ({ colorScheme }) => {
       href: "https://stg-americanrfidsolutionscom-staging.kinsta.cloud/",
       description:
         "For this American RFID Company, I built an entirely new landing page. Mockups, updated brand messaging, modernized styling and even some MidJourney AI generated art was used for backgrounds and testimonial profile pictures.",
-      technologies: "Wordpress and Elementor, PHP",
+      technologies: "Wordpress + Elementor, PHP",
       image: ars,
     },
     {
@@ -70,7 +70,7 @@ const Projects2: React.FC<ProjectProps> = ({ colorScheme }) => {
       title: "Color Randomizer",
       href: "https://gunndroid.github.io/random_color/",
       description: "This App Generates a Random RGB Color.",
-      technologies: "(React)",
+      technologies: "React",
       image: random_color,
     },
 
@@ -96,6 +96,10 @@ const Projects2: React.FC<ProjectProps> = ({ colorScheme }) => {
 
   return (
     <div id='projects-section' className={` border-t border-b border-white`}>
+      <h2 className='text-3xl font-semibold pt-10 text-center text-emerald-700'>
+        Projects
+      </h2>
+
       {projects.map((project, index) => (
         <a
           key={index}
@@ -113,8 +117,8 @@ const Projects2: React.FC<ProjectProps> = ({ colorScheme }) => {
             />
           )}
           <div className={`text-right text-white md:pr-6 pr-2`}>
-            <p className='font-bold text-lg'>{project.title}</p>
-            <i className='text-xs'>{project.technologies}</i>
+            <p className='font-bold text-xl'>{project.title}</p>
+            <i className='text-md'>{project.technologies}</i>
             {/* <p className='text-sm'>{project.description}</p> */}
           </div>
         </a>
