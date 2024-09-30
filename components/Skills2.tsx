@@ -25,6 +25,7 @@ const Skills2 = () => {
         <br />
         <span className='pt-2 font-bold '>Frontend Development</span>
         <li>Node</li>
+        <li>ReactJS</li>
         <li>NextJS</li>
         <li>Tailwind</li>
         <br />

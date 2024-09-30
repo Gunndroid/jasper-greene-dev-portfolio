@@ -200,11 +200,11 @@ const Footer: React.FC<FooterProps> = ({ colorScheme }) => (
       <div
         className={`text-center border-c-${colorScheme}-gray pt-6  transition-all duration-700 ease-in-out`}
       >
-        <a href='mailto:main@jasperxgreene.com' className='underline'>
-          main@jasperxgreene.com
+        <a href='mailto:glukari@protonmail.com' className='underline'>
+          glukari@protonmail.com
         </a>
         <p className='cursor-default text-md'>
-          ©JasperGreene{new Date().getFullYear()}
+          ©GunnarCurry{new Date().getFullYear()}
         </p>
       </div>
     </footer>

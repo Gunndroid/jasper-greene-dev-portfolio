@@ -38,8 +38,8 @@ const Projects2: React.FC<ProjectProps> = ({ colorScheme }) => {
       image: amorvia,
     },
     {
-      title: "30fix: Habits and Wellness",
-      href: "https://apps.apple.com/us/app/30fix-habits-wellness/id6504657742",
+      title: "30fix: Habits Made Simple",
+      href: "https://apps.apple.com/us/app/30fix-habits-made-simple/id6504657742",
       description:
         "LingoWorld was envisioned as a digital bridge to connect language enthusiasts from around the world. Built with a modern tech stack, it showcases the passion for community building and cross-cultural interactions.",
       technologies: "React-Native",

@@ -74,10 +74,10 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <div className='w-full text-center  pt-6'>
       <a
-        href='mailto:main@jasperxgreene.com'
+        href='mailto:glukari@protonmail.com'
         className='underline text-emerald-400 '
       >
-        main@jasperxgreene.com
+        glukari@protonmail.com
       </a>
       <nav
         className={`bg-transparent fixed top-0 w-full sm:ml-10  sm:flex justify-left h-10 items-center z-20 text-white`}
@@ -141,22 +141,22 @@ const Header: React.FC<HeaderProps> = ({
               Projects
             </span>
           </Link>
-          {/* <a
+          <a
             onClick={openModal}
             className='w-fit mx-auto hover:scale-110 transition-all cursor-pointer border border-white rounded-lg px-2'
           >
             Resume
-          </a> */}
+          </a>
         </div>
       </nav>
 
-      {/* {isModalOpen && (
+      {isModalOpen && (
         <div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[100] '>
           <div
             className={`bg-c-${colorScheme}-gray pt-10 pb-4 px-4 rounded-lg relative h-[95%] md:w-1/2 w-full`}
           >
             <embed
-              src='/GunnarCurryResume1.pdf'
+              src='/gunnarCurry-developer-resume-2024.pdf'
               type='application/pdf'
               className='w-full h-full rounded-md'
             />
@@ -167,7 +167,7 @@ const Header: React.FC<HeaderProps> = ({
               Close
             </button>
             <a
-              href='/GunnarCurryResume1.pdf'
+              href='/gunnarCurry-developer-resume-2024.pdf'
               download
               className={`absolute top-0 right-14 m-2 mr-4 text-c-${colorScheme}-dark`}
             >
@@ -175,7 +175,7 @@ const Header: React.FC<HeaderProps> = ({
             </a>
           </div>
         </div>
-      )} */}
+      )}
     </div>
   );
 };

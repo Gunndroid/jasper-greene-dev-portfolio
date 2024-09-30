@@ -15,8 +15,8 @@ const Contact: React.FC<ContactProps> = ({ colorScheme }) => (
         <h2 className='text-4xl font-bold mb-2'>Need a Developer?</h2>
         <p className='mb-4'>Let&apos;s build something awesome together.</p>
         {/* <h3 className="text-xl font-bold mb-2">Get in Touch</h3> */}
-        <a href='mailto:main@jasperxgreene.com' className='underline'>
-          main@jasperxgreene.com{" "}
+        <a href='mailto:glukari@protonmail.com' className='underline'>
+          glukari@protonmail.com{" "}
         </a>
       </div>
 

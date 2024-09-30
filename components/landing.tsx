@@ -77,9 +77,10 @@ const Landing: React.FC<LandingProps> = ({ colorScheme }) => {
         </div>
       )}
       <div
-        className={`text-c-${colorScheme}-gray pl-4 md:ml-32 pt-[12rem] sm:pt-0  w-full z-10 transition-all duration-700 ease-in-out text-center`}
+        className={`text-c-${colorScheme}-gray pl-4 pt-[12rem] sm:pt-0  w-full z-10 transition-all duration-700 ease-in-out text-center`}
       >
-        <h2 className='text-5xl font-semibold mb-2'>Jasper Greene</h2>
+        <h2 className='text-5xl font-semibold mb-2'>Gunnar Curry</h2>
+        {/* <h2 className='text-5xl font-semibold mb-2'>Jasper Greene</h2> */}
         <h1 className='text-3xl font-thin'>App Development Specialist</h1>
         <h1 className='text-xl font-light text-emerald-400'>
           ReactJS + React-Native
@@ -92,13 +93,13 @@ const Landing: React.FC<LandingProps> = ({ colorScheme }) => {
           Let&apos;s Talk
         </button> */}
       </div>
-      <div className='absolute bottom-0 right-0  '>
+      {/* <div className='absolute bottom-0 right-0  '>
         <img
           src='../img/gunnarEdit.png'
           className='md:w-[70vh] sm:w-[30rem] w-[25rem] opacity-90'
           alt='Image of Jasper Greene, the Developer of the portfolio.'
         />
-      </div>
+      </div> */}
       {showModal && (
         <div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-20'>
           <div
