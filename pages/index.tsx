@@ -49,7 +49,7 @@ const Home: React.FC = () => {
           ]}
         />
       </div> */}
-
+      {/*  */}
       <main>
         {/* <Header colorScheme={colorScheme} /> */}
         <Header
@@ -68,7 +68,7 @@ const Home: React.FC = () => {
           <Landing colorScheme={colorScheme} />
           {/* <About colorScheme={colorScheme} /> */}
           <Projects2 colorScheme={colorScheme} />
-          <Skills2  />
+          <Skills2 />
           <Footer colorScheme={colorScheme} />
         </div>
 
